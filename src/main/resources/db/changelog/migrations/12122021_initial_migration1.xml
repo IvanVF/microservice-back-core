@@ -32,12 +32,28 @@
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true" />
             </column>
-            <column name="image_blob" type="bytea">
-                <constraints nullable="false"/>
+            <column name="img_addr" type="varchar(400)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" unique="true" />
             </column>
             <column name="description" type="varchar(255)" />
             <column name="type" type="varchar(255)" />
         </createTable>
+    </changeSet>
+
+    <!-- Заполнение таблицы images картинками женских велосипедов -->
+    <changeSet author="FeinIV" id="12122021_initial_migration_3">
+        <sql>
+            INSERT INTO images (img_addr, name, description, type)
+            VALUES
+            ('assets/images/woman_bicycles/canyon.jpg', 'canyon', 'canyon description', 'WOMAN'),
+            ('assets/images/woman_bicycles/cube.jpg', 'cube', 'cube description', 'WOMAN'),
+            ('assets/images/woman_bicycles/dawes.jpg', 'dawes', 'dawes description', 'WOMAN'),
+            ('assets/images/woman_bicycles/Genesis 26.jpg', 'Genesis 26', 'Genesis 26 description', 'WOMAN'),
+            ('assets/images/woman_bicycles/lekker.jpg', 'lekker', 'lekker description', 'WOMAN')
+        </sql>
     </changeSet>
 
 </databaseChangeLog>

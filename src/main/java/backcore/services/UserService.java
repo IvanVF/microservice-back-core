@@ -1,6 +1,6 @@
 package backcore.services;
 
-import backcore.entitys.UserEntity;
+import backcore.entities.UserEntity;
 import backcore.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package backcore.controllers;
 
-import backcore.entitys.UserEntity;
+import backcore.entities.UserEntity;
 import backcore.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

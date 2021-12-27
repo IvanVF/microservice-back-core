@@ -1,4 +1,4 @@
-package backcore.entitys;
+package backcore.entities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
