@@ -26,34 +26,39 @@
         </sql>
     </changeSet>
 
-    <!-- Создание таблицы images-->
+    <!-- Создание таблицы bicycles-->
     <changeSet author="FeinIV" id="222122021_initial_migration_3">
-        <createTable tableName="images">
+        <createTable tableName="bicycles">
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true" />
             </column>
             <column name="img_addr" type="varchar(400)">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="name" type="varchar(255)">
-                <constraints nullable="false" unique="true" />
+            <column name="bicycle_name" type="varchar(255)">
+                <constraints nullable="false"/>
             </column>
-            <column name="description" type="varchar(255)" />
-            <column name="type" type="varchar(255)" />
+            <column name="bicycle_manufacturer" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="decimal">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discount" type="decimal"/>
+            <column name="description" type="varchar(1000)"/>
+            <column name="level" type="int"/>
+            <column name="frame_material" type="varchar(100)"/>
+            <column name="fork_type" type="varchar(100)"/>
+            <column name="fork_material" type="varchar(100)"/>
+            <column name="fork_description" type="varchar(100)"/>
+            <column name="number_of_speeds" type="int"/>
+            <column name="bicycle_type" type="varchar(100)"/>
+            <column name="weight" type="decimal"/>
+            <column name="wheel_diameter" type="varchar(50)"/>
+            <column name="rim_type" type="varchar(50)"/>
+            <column name="break_type" type="varchar(100)"/>
+            <column name="sex" type="varchar(50)"/>
         </createTable>
-    </changeSet>
-
-    <!-- Заполнение таблицы images картинками женских велосипедов -->
-    <changeSet author="FeinIV" id="12122021_initial_migration_3">
-        <sql>
-            INSERT INTO images (img_addr, name, description, type)
-            VALUES
-            ('assets/images/woman_bicycles/canyon.jpg', 'canyon', 'canyon description', 'WOMAN'),
-            ('assets/images/woman_bicycles/cube.jpg', 'cube', 'cube description', 'WOMAN'),
-            ('assets/images/woman_bicycles/dawes.jpg', 'dawes', 'dawes description', 'WOMAN'),
-            ('assets/images/woman_bicycles/Genesis 26.jpg', 'Genesis 26', 'Genesis 26 description', 'WOMAN'),
-            ('assets/images/woman_bicycles/lekker.jpg', 'lekker', 'lekker description', 'WOMAN')
-        </sql>
     </changeSet>
 
 </databaseChangeLog>

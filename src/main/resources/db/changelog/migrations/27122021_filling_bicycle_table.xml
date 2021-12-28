@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <!-- Заполнение таблицы bicycles данными -->
+    <changeSet author="FeinIV" id="27122021_filling_bicycle_table_1">
+        <sql>
+            INSERT INTO bicycles (
+            img_addr, bicycle_name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
+            break_type, sex
+            )
+            VALUES
+            ('assets/images/woman_bicycles/Stels Navigator 245 26 Z010 (2020).jpg', 'Stels Navigator 245 26 Z010 (2020)', 'Stels', 15210, 15,
+            'Женский дорожный велосипед без переключения передач. Технические особенности: прочная стальная рама
+            Hi-Ten, жесткая стальная вилка, двойные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные крылья,
+            багажник, передняя корзина, звонок. Подходит для прогулочной езды по шоссе и ровным проселочным дорогам.
+            Диаметр колес - 26 дюймов. Вес - 16,6 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.43', '26 inches',
+            'Double', 'Foot pedal', 'Female'
+            ),
+
+            ('assets/images/woman_bicycles/Stels Navigator 300 Lady 28 Z010 (2018).jpg', 'Stels Navigator 300 Lady 28 Z010 (2018)', 'Stels', 13530, 28,
+            'Женский дорожный велосипед без переключения передач. Технические особенности: стальная рама Hi-Ten, жесткая стальная вилка,
+            двойные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные крылья, багажник, звонок. Подходит для прогулочного
+            катания в городских условиях и по несложным маршрутам в лесу. Диаметр колес - 28 дюймов. Вес - 17,43 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.43', '28 inches',
+            'Double', 'Foot pedal', 'Female'
+            ),
+
+            ('assets/images/woman_bicycles/Stels Navigator 325 28 Z010 (2019).jpg', 'Stels Navigator 325 28 Z010 (2019)', 'Stels', 13530, 28,
+            'Женский дорожный велосипед без переключения передач. Технические особенности: стальная рама Hi-Ten, жесткая
+            стальная вилка, двойные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные крылья, багажник,
+            передняя корзина, звонок. Подходит для прогулочного катания в городских условиях и по несложным маршрутам в лесу.
+            Диаметр колес - 28 дюймов. Вес - 17,3 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.3', '28 inches',
+            'Double', 'Foot pedal', 'Female'
+            ),
+
+            ('assets/images/woman_bicycles/Stels Navigator 345 28 Z010 (2018).jpg', 'Stels Navigator 345 28 Z010 (2018)', 'Stels', 14380, 25,
+            '
+            Женский дорожный велосипед без переключения передач. Технические особенности: стальная рама Hi-Ten, жесткая стальная вилка,
+            двойные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные крылья, багажник, комфортное седло, звонок. Подходит
+            для прогулочного катания в городских условиях и по несложным маршрутам в лесу. Диаметр колес - 28 дюймов. Вес - 17,31 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.31', '28 inches',
+            'Double', 'Foot pedal', 'Female'
+            ),
+
+            ('assets/images/woman_bicycles/Stinger Cruiser Lady 26 (2021).jpg', 'Stinger Cruiser Lady 26 (2021)', 'Stinger', 22700, 15,
+            '
+            Комфортабельный женский круизер без переключения передач. Технические особенности: алюминиевая рама 6061, жесткая стальная вилка
+            Stinger Rigid, двойные обода Felgebeiter HAC21, передний тормоз - STG V-Brake, задний - ножной, защита цепи, длинные крылья,
+            комфортное седло, звонок, подножка. Подходит для комфортного катания по паркам и городским улицам. Диаметр колес - 26 дюймов.
+            Вес - 16,3 кг.',
+            1, 'Aluminum', 'Regid', 'Steel', 'Regid steel fork from Stinger manufacturer', '1', 'WOMAN', '16.3', '26 inches',
+            'Double', 'Foot pedal', 'Female'
+            )
+
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
