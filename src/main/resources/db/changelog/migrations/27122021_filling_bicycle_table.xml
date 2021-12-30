@@ -5,12 +5,12 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <!-- Заполнение таблицы bicycles данными -->
-    <changeSet author="FeinIV" id="27122021_filling_bicycle_table_1">
+    <changeSet author="FeinIV" id="27122021_filling_bicycle_table_WOMAN">
         <sql>
             INSERT INTO bicycles (
             img_addr, bicycle_name, bicycle_manufacturer, price, discount, description, level, frame_material,
             fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
-            break_type, sex
+            break_type, sex, availability
             )
             VALUES
             ('assets/images/woman_bicycles/Stels Navigator 245 26 Z010 (2020).jpg', 'Stels Navigator 245 26 Z010 (2020)', 'Stels', 15210, 15,
@@ -19,7 +19,7 @@
             багажник, передняя корзина, звонок. Подходит для прогулочной езды по шоссе и ровным проселочным дорогам.
             Диаметр колес - 26 дюймов. Вес - 16,6 кг.',
             1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.43', '26 inches',
-            'Double', 'Foot pedal', 'Female'
+            'Double', 'Foot pedal', 'Female', 'true'
             ),
 
             ('assets/images/woman_bicycles/Stels Navigator 300 Lady 28 Z010 (2018).jpg', 'Stels Navigator 300 Lady 28 Z010 (2018)', 'Stels', 13530, 28,
@@ -27,7 +27,7 @@
             двойные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные крылья, багажник, звонок. Подходит для прогулочного
             катания в городских условиях и по несложным маршрутам в лесу. Диаметр колес - 28 дюймов. Вес - 17,43 кг.',
             1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.43', '28 inches',
-            'Double', 'Foot pedal', 'Female'
+            'Double', 'Foot pedal', 'Female', 'false'
             ),
 
             ('assets/images/woman_bicycles/Stels Navigator 325 28 Z010 (2019).jpg', 'Stels Navigator 325 28 Z010 (2019)', 'Stels', 13530, 28,
@@ -36,7 +36,7 @@
             передняя корзина, звонок. Подходит для прогулочного катания в городских условиях и по несложным маршрутам в лесу.
             Диаметр колес - 28 дюймов. Вес - 17,3 кг.',
             1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.3', '28 inches',
-            'Double', 'Foot pedal', 'Female'
+            'Double', 'Foot pedal', 'Female', 'true'
             ),
 
             ('assets/images/woman_bicycles/Stels Navigator 345 28 Z010 (2018).jpg', 'Stels Navigator 345 28 Z010 (2018)', 'Stels', 14380, 25,
@@ -45,7 +45,7 @@
             двойные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные крылья, багажник, комфортное седло, звонок. Подходит
             для прогулочного катания в городских условиях и по несложным маршрутам в лесу. Диаметр колес - 28 дюймов. Вес - 17,31 кг.',
             1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.31', '28 inches',
-            'Double', 'Foot pedal', 'Female'
+            'Double', 'Foot pedal', 'Female', 'false'
             ),
 
             ('assets/images/woman_bicycles/Stinger Cruiser Lady 26 (2021).jpg', 'Stinger Cruiser Lady 26 (2021)', 'Stinger', 22700, 15,
@@ -55,7 +55,224 @@
             комфортное седло, звонок, подножка. Подходит для комфортного катания по паркам и городским улицам. Диаметр колес - 26 дюймов.
             Вес - 16,3 кг.',
             1, 'Aluminum', 'Regid', 'Steel', 'Regid steel fork from Stinger manufacturer', '1', 'WOMAN', '16.3', '26 inches',
-            'Double', 'Foot pedal', 'Female'
+            'Double', 'Foot pedal', 'Female', 'true'
+            )
+
+        </sql>
+    </changeSet>
+
+    <!-- Заполнение таблицы bicycles детскими велосипедами -->
+    <changeSet author="FeinIV" id="29122021_filling_bicycle_table_CHILDREN">
+        <sql>
+            INSERT INTO bicycles (
+            img_addr, bicycle_name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
+            break_type, sex, availability
+            )
+            VALUES
+            ('assets/images/children_bicycles/Stels Powerkid Boy V020 (2020).jpg', 'Stels Powerkid Boy V020 (2020)', 'Stels', 4040, 15,
+            'Беговел, предназначенный для детей в возрасте от полутора до трех лет. Технические особенности: прочная стальная рама Hi-Ten,
+            жесткая стальная вилка, одинарные алюминиевые обода, тормоза не предусмотрены конструкцией. Подходит для обучения и легких прогулок.
+            Диаметр колес - 12 дюймов. Вес - 5,3 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '0', 'CHILDREN', '5.3', '12 inches',
+            'Aluminum, single', 'No brakes', 'Unisex', 'false'
+            ),
+
+            ('assets/images/children_bicycles/Polisport Balance bike (2020).jpg', 'Polisport Balance bike (2020)', 'Polisport', 4600, 20,
+            'Беговел, предназначенный для детей в возрасте от полутора до трех лет. Технические особенности: пластиковая рама,
+            жесткая пластиковая вилка, усиленные пластиковые обода, тормоза не предусмотрены конструкцией (торможение ногами).
+            Максимальная нагрузка - 25 кг. Подходит для обучения и легких прогулок. Диаметр колес - 9,5 дюймов. Вес - 3 кг.',
+            1, 'Plastic', 'Regid', 'Plastic', 'Regid plastic fork from Polisport manufacturer', '1', 'CHILDREN', '3', '10 inches',
+            'Plastic, reinforced', 'No brakes', 'Unisex', 'true'
+            ),
+
+            ('assets/images/children_bicycles/Novatrack Urban 16 (2019).jpg', 'Novatrack Urban 16 (2019)', 'Novatrack', 6600, 21,
+            'Велосипед, предназначенный для детей в возрасте от двух до четырех лет, без переключения передач.
+            Технические особенности: стальная рама Hi-Ten, жесткая стальная вилка, одинарные алюминиевые обода, ножные педальные тормоза,
+            защита цепи, съемные боковые колеса, крылья, мягкая накладка на руле, звонок. Подходит для обучения и легких прогулок.
+            Диаметр колес - 16 дюймов. Вес - 9,8 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Novatrack manufacturer', '1', 'CHILDREN', '9.8', '16 inches',
+            'Single, aluminum', 'Foot pedal', 'Unisex', 'false'
+            ),
+
+            ('assets/images/children_bicycles/Stels Flyte 14 Z011 (2018).jpg', 'Stels Flyte 14 Z011 (2018)', 'Stels', 8000, 36,
+            'Велосипед, предназначенный для детей в возрасте от двух до четырех лет, без переключения передач. Технические особенности:
+            стальная рама Hi-Ten, жесткая стальная вилка, одинарные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные
+            крылья, багажник, звонок. Подходит для обучения и легких прогулок. Диаметр колес - 14 дюймов. Вес - 10,4 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'CHILDREN', '10.4', '14 inches',
+            'Single, aluminum', 'Foot pedal', 'Unisex', 'true'
+            ),
+
+            ('assets/images/children_bicycles/Stels Pilot 200 Gent 20 Z010 (2019).jpg', 'Stels Pilot 200 Gent 20 Z010 (2019)', 'Stels', 22700, 15,
+            'Велосипед, предназначенный для детей в возрасте от пяти до девяти лет, без переключения передач. Технические особенности:
+            стальная рама Hi-Ten, жесткая стальная вилка, двойные алюминиевые обода, ножные педальные тормоза, полная защита цепи, стальные
+            крылья, звонок. Подходит для обучения и прогулочного катания в городских условиях. Диаметр колес - 20 дюймов. Вес - 12,5 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'CHILDREN', '12.5', '20 inches',
+            'Double', 'Foot pedal and front V-brake', 'Unisex', 'false'
+            )
+
+        </sql>
+    </changeSet>
+
+    <!-- Заполнение таблицы bicycles дорожными велосипедами -->
+    <changeSet author="FeinIV" id="29122021_filling_bicycle_table_ROAD">
+        <sql>
+            INSERT INTO bicycles (
+            img_addr, bicycle_name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
+            break_type, sex, availability
+            )
+            VALUES
+            ('assets/images/road_bicycles/Altair City 28 high (2022).jpg', 'Altair City 28 high (2022)', 'Altair', 9360, 0,
+            'Дорожный велосипед начального уровня без переключения передач. Технические особенности: стальная рама Hi-Ten,
+            жесткая стальная вилка Hi-Ten, двойные алюминиевые обода, ножные педальные тормоза, длинные крылья, защита цепи, багажник.
+            Подходит для прогулочной езды по шоссе и несложной пересеченной местности. Диаметр колес - 28 дюймов. Вес - 18 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Altair manufacturer', '0', 'ROAD', '18', '28 inches',
+            'Double', 'Foot pedal', 'Unisex', 'false'
+            ),
+
+            ('assets/images/road_bicycles/Bear Bike Stockholm (2021).jpg', 'Bear Bike Stockholm (2021)', 'Bear Bike', 25000, 20,
+            'Дорожный велосипед для катания в городской среде без переключения передач. Технические особенности: стальная рама Hi-ten,
+            жесткая стальная вилка, двойные алюминиевые обода, надежные ободные тормоза клещевого типа Tektro R315.
+            Подходит для прогулочного и спортивного катания в городских условиях. Диаметр колес - 28 дюймов. Вес - 10 кг.',
+            1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Bear Bike manufacturer', '1', 'ROAD', '10', '28 inches',
+            'Double', 'V-brakes', 'Unisex', 'true'
+            ),
+
+            ('assets/images/road_bicycles/Stels Navigator 800 Gent 28 V010 (2021).jpg', 'Stels Navigator 800 Gent 28 V010 (2021)', 'Stels', 33200, 15,
+            'Дорожный велосипед класса туринг с навесным оборудованием Microshift, 21 скорость. Технические особенности: алюминиевая рама, амортизационная вилка,
+            двойные алюминиевые обода, надежные ободные тормоза V-brake, пластиковая защита цепи, длинные крылья, багажник, регулируемый вынос, подножка.
+            Подходит для туристического и прогулочного катания по различным дорогам и пересеченной местности. Диаметр колес - 28 дюймов. Вес - 16,4 кг.',
+            2, 'Aluminum', 'Spring-elastomeric', 'Aluminum', 'Spring-elastomeric, stroke 60 mm', '21', 'ROAD', '16.4', '16 inches',
+            'Double', 'V-brakes', 'Unisex', 'false'
+            ),
+
+            ('assets/images/road_bicycles/Merida Speeder GT-R (2021).jpg', 'Merida Speeder GT-R (2021)', 'Merida', 43870, 0,
+            'Дорожный велосипед для катания в городской среде с оборудованием любительского класса Shimano, 16 скоростей.
+            Технические особенности: алюминиевая рама Speeder TFS, жесткая карбоновая вилка Merida Speeder CF2, двойные
+            обода Merida Comp SL, ободные механические тормоза клещевого типа AS2.2D. Подходит для прогулочного и спортивного
+            катания в городских условиях. Диаметр колес - 28 дюймов. Вес - 10,2 кг.',
+            2, 'Aluminum', 'Regid', 'Carbon', 'MERIDA SPEEDER CF2 Tapered; MAT carbon', '16', 'ROAD', '10.2', '28 inches',
+            'Single', 'AS2.2D', 'Unisex', 'true'
+            ),
+
+            ('assets/images/road_bicycles/Trek Dual Sport 3 (2019).jpg', 'Trek Dual Sport 3 (2019)', 'Trek', 51400, 10,
+            'Дорожный велосипед для катания в городской среде с оборудованием высшего любительского класса Shimano, 27 скоростей.
+            Технические особенности: алюминиевая рама Alpha Gold Aluminum, амортизационная вилка SR Suntour NEX, двойные обода
+            Bontrager Approved, дисковые гидравлические тормоза Shimano MT200 hydraulic disc. Подходит для прогулочного и
+            спортивного катания в городских условиях. Диаметр колес - 28 дюймов. Вес - 13.5 кг.',
+            2, 'Aluminum', 'Spring-elastomeric', 'Aluminum', 'Spring-elastomeric, stroke 63 mm', '27', 'ROAD', '13.5', '28 inches',
+            'Double', 'Disc hydraulic', 'Unisex', 'true'
+            )
+
+        </sql>
+    </changeSet>
+
+    <!-- Заполнение таблицы bicycles комфортными велосипедами -->
+    <changeSet author="FeinIV" id="29122021_filling_bicycle_table_COMFORT">
+        <sql>
+            INSERT INTO bicycles (
+            img_addr, bicycle_name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
+            break_type, sex, availability
+            )
+            VALUES
+            ('assets/images/comfort_bicycles/Welt King AL 3 (2021).jpg', 'Welt King AL 3 (2021)', 'Welt', 34000, 15,
+            'Комфортабельный круизер с оборудованием планетарного типа Shimano, 3 скорости. Технические особенности:
+            алюминиевая рама Alloy 6061, жесткая стальная вилка Rigid steel, двойные алюминиевые обода, передний тормоз
+            - Artek 218DG V-brake, задний - ножной, защита цепи, длинные крылья, багажник, комфортное седло, подножка.
+            Подходит для комфортного катания по паркам и городским улицам. Диаметр колес - 26 дюймов. Вес - 17,5 кг.',
+            2, 'Aluminum', 'Regid', 'Steel', 'Regid steel fork from Welt manufacturer', '3', 'COMFORT', '17.5', '26 inches',
+            'Double', 'Foot pedal and V-brake', 'Unisex', 'false'
+            ),
+
+            ('assets/images/comfort_bicycles/Merida Crossway 40 (2021).jpg', 'Merida Crossway 40 (2021)', 'Merida', 48790, 0,
+            'Комфортабельный дорожный велосипед с оборудованием любительского класса Shimano, 27 скоростей. Технические особенности:
+            алюминиевая рама Crossway Speed, амортизационная вилка SR Suntour NEX HLO с ходом 63 мм, двойные обода Merida CC,
+            дисковые гидравлические тормоза Shimano ST-EF505, амортизированный подседельный штырь, регулируемый вынос. Подходит
+            для комфортного катания по паркам, городским улицам и по маршрутам средней сложности в лесу. Диаметр колес - 28 дюймов. Вес - 14 кг.',
+            2, 'Aluminum', 'Spring-elastomeric', 'Aluminum', 'Spring-elastomeric, stroke 63 mm', '27', 'COMFORT', '14', '28 inches',
+            'Double', 'Disc hydraulic', 'Unisex', 'true'
+            ),
+
+            ('assets/images/comfort_bicycles/Giant Sedona DX (2021).jpg', 'Giant Sedona DX (2021)', 'Giant', 54100, 0,
+            'Комфортабельный велосипед с оборудованием начального любительского класса Shimano, 16 скоростей. Технические особенности:
+            алюминиевая рама ALUXX-Grade Aluminum, амортизационная вилка SR Suntour XCT, двойные обода Giant GX Disc, дисковые механические
+            тормоза, амортизированный подседельный штырь, регулируемый вынос, комфортное седло. Подходит для комфортного катания по паркам,
+            городским улицам и по маршрутам средней сложности в лесу. Диаметр колес - 26 дюймов. Вес - 15,2 кг.',
+            2, 'Aluminum', 'Spring-elastomeric', 'Aluminum', 'Spring-elastomeric, stroke 80 mm', '21', 'COMFORT', '15.2', '26 inches',
+            'Double', 'Disc mechanic', 'Unisex', 'false'
+            ),
+
+            ('assets/images/comfort_bicycles/Format 5512 26 (2021).jpg', 'Format 5512 26 (2021)', 'Format', 36620, 0,
+            'Комфортабельный круизер с оборудованием планетарного типа Shimano, 3 скорости. Технические особенности:
+            алюминиевая рама City/Cruiser, жесткая стальная вилка , двойные обода Weinmann Amuz, ножные педальные тормоза,
+            отличающиеся наибольшей простотой в использовании и надежностью, крылья. Подходит для комфортного катания по паркам
+            и городским улицам. Диаметр колес 26 дюймов. Вес - 14,2 кг.',
+            2, 'Aluminum', 'Regid', 'Steel', 'Regid steel fork from Welt manufacturer', '3', 'COMFORT', '14.2', '26 inches',
+            'Double', 'Foot pedal', 'Unisex', 'true'
+            ),
+
+            ('assets/images/comfort_bicycles/Giant Simple Single (2009).jpg', 'Giant Simple Single (2009)', 'Giant', 10383, 5,
+            'Комфортный хардтейл с оборудованием начального класса Shimano Tourney, 1 скорость, алюминиевая рама
+            ALUXX-Grade Aluminum, жесткая передняя вилка, тормоза ободные механические, двойные обода. Подходит для комфортного стиля езды',
+            2, 'Aluminum', 'Regid', 'Steel', 'Regid steel fork from Giant manufacturer', '1', 'COMFORT', '14', '26 inches',
+            'Double', 'Foot pedal', 'Unisex', 'false'
+            )
+
+        </sql>
+    </changeSet>
+
+    <!-- Заполнение таблицы bicycles гравийными велосипедами -->
+    <changeSet author="FeinIV" id="29122021_filling_bicycle_table_GRAVEL">
+        <sql>
+            INSERT INTO bicycles (
+            img_addr, bicycle_name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
+            break_type, sex, availability
+            )
+            VALUES
+            ('assets/images/gravel_bicycles/Rush Hour GS 385 (2021).jpg', 'Rush Hour GS 385 (2021)', 'Rush Hour', 41260, 0,
+            'Гравийный велосипед с оборудованием начального любительского класса Shimano, 16 скоростей. Технические особенности:
+            алюминиевая рама, жесткая алюминиевая вилка, двойные алюминиевые обода, дисковые механические тормоза Ruiput DS310A.
+            Подходит для активной езды по различным дорогам и пересеченной местности. Диаметр колес - 28 дюймов. Вес - 13,8 кг.',
+            2, 'Aluminum', 'Regid', 'Aluminum', 'Regid aluminum fork from Rush Hour manufacturer', '16', 'GRAVEL', '13.8', '28 inches',
+            'Double', 'Disc mechanic', 'Unisex', 'true'
+            ),
+
+            ('assets/images/gravel_bicycles/Format 5222 CF (2021).jpg', 'Format 5222 CF (2021)', 'Format', 89900, 0,
+            'Гравийный велосипед с оборудованием начального любительского класса Shimano, 16 скоростей. Технические особенности:
+            хромомолибденовая рама 700C Tour 4130 Cr-mo, жесткая вилка, двойные обода Weinmann Impulse, дисковые механические тормоза
+            TRP Spyre. Подходит для активной езды по различным дорогам и пересеченной местности. Диаметр колес - 28 дюймов. Вес - 15 кг.',
+            2, 'CrMo', 'Regid', 'CrMo', 'Regid CrMo fork from Format manufacturer', '16', 'GRAVEL', '15', '28 inches',
+            'Double', 'Disc mechanic', 'Unisex', 'false'
+            ),
+
+            ('assets/images/gravel_bicycles/Merida Silex 200 (2020).jpg', 'Merida Silex 200 (2020)', 'Merida', 73426, 0,
+            'Гравийный велосипед с оборудованием любительского класса Shimano, 18 скоростей. Технические особенности:
+            алюминиевая рама Silex Lite, жесткая вилка Merida Silex CF2, двойные обода Merida Comp SL,
+            дисковые механические тормоза Promax DSK-330R. Подходит для активной езды по различным дорогам и пересеченной местности.
+            Диаметр колес - 28 дюймов. Вес - 10,45 кг.',
+            3, 'Aluminum', 'Regid', 'Aluminum', 'Merida Silex CF2', '18', 'GRAVEL', '10.45', '28 inches',
+            'Double', 'Disc mechanic', 'Unisex', 'false'
+            ),
+
+            ('assets/images/gravel_bicycles/Cube Nuroad EX (2022).jpg', 'Cube Nuroad EX (2022)', 'Cube', 158400, 0,
+            'Гравийный велосипед с оборудованием профессионального класса Shimano, 11 скоростей. Технические особенности:
+            алюминиевая рама Aluminium 6061 T6 Superlite, жесткая вилка CUBE Nuroad Disc, двойные обода CUBE GR 2.3,
+            дисковые гидравлические тормоза Shimano GRX BR-RX400. Подходит для активной езды по различным дорогам и
+            пересеченной местности. Диаметр колес - 28 дюймов. Вес - 10,2 кг.',
+            5, 'Aluminum', 'Regid', 'Carbon', 'CUBE Nuroad Flat Mount Disc, Full Carbon', '11', 'GRAVEL', '10.2', '28 inches',
+            'Double', 'Disc hydraulic', 'Unisex', 'true'
+            ),
+
+            ('assets/images/gravel_bicycles/Mongoose Guide Comp (2019).jpg', 'Mongoose Guide Comp (2019)', 'Mongoose', 82300, 0,
+            'Циклокроссовый велосипед с оборудованием предпрофессионального класса Shimano, 20 скоростей. Технические особенности:
+            алюминиевая рама aluminum 700c adventure geometry, жесткая карбоновая вилка Mongoose 700c carbon, двойные
+            алюминиевые обода WTB ST-19 aluminum double wall, дисковые гидравлические тормоза Shimano BR-S405. Подходит
+            для спортивного катания в дисциплине велокросс. Диаметр колес - 28 дюймов. Вес - 10 кг.',
+            4, 'Aluminum', 'Regid', 'Carbon', 'Mongoose 700c carbon with aluminum steerer', '20', 'GRAVEL', '10', '28 inches',
+            'Double', 'Disc hydraulic', 'Unisex', 'false'
             )
 
         </sql>

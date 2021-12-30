@@ -44,7 +44,12 @@
             <column name="price" type="decimal">
                 <constraints nullable="false"/>
             </column>
-            <column name="discount" type="decimal"/>
+            <column name="availability" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discount" type="decimal">
+                <constraints nullable="false"/>
+            </column>
             <column name="description" type="varchar(1000)"/>
             <column name="level" type="int"/>
             <column name="frame_material" type="varchar(100)"/>
