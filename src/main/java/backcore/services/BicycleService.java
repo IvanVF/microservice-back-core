@@ -31,7 +31,7 @@ public class BicycleService {
         } else if (params.get("type") != null) {
             bicycles = bicycleRepository.findAllByBicycleType((String) params.get("type"));
         } else if (params.get("name") != null) {
-            bicycles = bicycleRepository.findAllByBicycleName((String) params.get("name"));
+            bicycles = bicycleRepository.findAllByName((String) params.get("name"));
         } else {
             bicycles = bicycleRepository.findAll();
         }

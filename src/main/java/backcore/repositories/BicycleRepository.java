@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface BicycleRepository extends JpaRepository<BicycleEntity, Long> {
     List<BicycleEntity> findAllByBicycleType(String type);
-    List<BicycleEntity> findAllByBicycleName(String name);
+    List<BicycleEntity> findAllByName(String name);
 
 }

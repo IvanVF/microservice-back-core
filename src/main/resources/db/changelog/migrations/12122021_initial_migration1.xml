@@ -35,7 +35,7 @@
             <column name="img_addr" type="varchar(400)">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="bicycle_name" type="varchar(255)">
+            <column name="name" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
             <column name="bicycle_manufacturer" type="varchar(255)">

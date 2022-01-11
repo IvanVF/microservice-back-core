@@ -20,8 +20,8 @@ public class BicycleEntity {
     @Column(name = "img_addr")
     String imgAddr;
 
-    @Column(name = "bicycle_name")
-    String bicycleName;
+    @Column(name = "name")
+    String name;
 
     @Column(name = "bicycle_manufacturer")
     String bicycleManufacturer;
