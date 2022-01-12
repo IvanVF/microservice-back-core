@@ -8,7 +8,7 @@
     <changeSet author="FeinIV" id="27122021_filling_bicycle_table_WOMAN">
         <sql>
             INSERT INTO bicycles (
-            img_addr, name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            img_addr, name, manufacturer, price, discount, description, level, frame_material,
             fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
             break_type, sex, availability
             )
@@ -65,7 +65,7 @@
     <changeSet author="FeinIV" id="29122021_filling_bicycle_table_CHILDREN">
         <sql>
             INSERT INTO bicycles (
-            img_addr, name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            img_addr, name, manufacturer, price, discount, description, level, frame_material,
             fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
             break_type, sex, availability
             )
@@ -118,7 +118,7 @@
     <changeSet author="FeinIV" id="29122021_filling_bicycle_table_ROAD">
         <sql>
             INSERT INTO bicycles (
-            img_addr, name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            img_addr, name, manufacturer, price, discount, description, level, frame_material,
             fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
             break_type, sex, availability
             )
@@ -172,7 +172,7 @@
     <changeSet author="FeinIV" id="29122021_filling_bicycle_table_COMFORT">
         <sql>
             INSERT INTO bicycles (
-            img_addr, name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            img_addr, name, manufacturer, price, discount, description, level, frame_material,
             fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
             break_type, sex, availability
             )
@@ -227,7 +227,7 @@
     <changeSet author="FeinIV" id="29122021_filling_bicycle_table_GRAVEL">
         <sql>
             INSERT INTO bicycles (
-            img_addr, name, bicycle_manufacturer, price, discount, description, level, frame_material,
+            img_addr, name, manufacturer, price, discount, description, level, frame_material,
             fork_type, fork_material, fork_description, number_of_speeds, bicycle_type, weight, wheel_diameter, rim_type,
             break_type, sex, availability
             )
