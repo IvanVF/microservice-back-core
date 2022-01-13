@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <!-- Заполнение таблицы scooters внедорожными самокатами -->
-    <changeSet author="FeinIV" id="27122021_filling_bicycle_table_WOMAN">
+    <changeSet author="FeinIV" id="27122021_filling_scooters_table_OFFROAD">
         <sql>
             INSERT INTO scooters (
             img_addr, name, manufacturer, price, discount, type, description,
@@ -37,7 +37,7 @@
     </changeSet>
 
     <!-- Заполнение таблицы scooters городскими самокатами -->
-    <changeSet author="FeinIV" id="27122021_filling_bicycle_table_WOMAN">
+    <changeSet author="FeinIV" id="27122021_filling_scooters_table_CITY">
         <sql>
             INSERT INTO scooters (
             img_addr, name, manufacturer, price, discount, type, description,

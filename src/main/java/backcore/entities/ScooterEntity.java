@@ -26,7 +26,7 @@ public class ScooterEntity {
     String manufacturer;
 
     @Column(name = "availability")
-    String availability;
+    boolean availability;
 
     @Column(name = "price")
     double price;
