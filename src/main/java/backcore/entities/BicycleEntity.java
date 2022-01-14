@@ -1,6 +1,5 @@
 package backcore.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,6 +26,9 @@ public class BicycleEntity {
 
     @Column(name = "price")
     double price;
+
+    @Column(name = "availability")
+    boolean availability;
 
     @Column(name = "discount")
     double discount;

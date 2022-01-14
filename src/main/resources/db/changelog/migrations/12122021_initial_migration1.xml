@@ -30,7 +30,7 @@
     <changeSet author="FeinIV" id="222122021_initial_migration_3">
         <createTable tableName="bicycles">
             <column name="id" type="serial">
-                <constraints primaryKey="true" nullable="false" unique="true" />
+                <constraints primaryKey="true" nullable="false" unique="true"/>
             </column>
             <column name="img_addr" type="varchar(400)">
                 <constraints nullable="false" unique="true"/>
@@ -72,7 +72,7 @@
     <changeSet author="FeinIV" id="120122022_initial_migration_4">
         <createTable tableName="scooters">
             <column name="id" type="serial">
-                <constraints primaryKey="true" nullable="false" unique="true" />
+                <constraints primaryKey="true" nullable="false" unique="true"/>
             </column>
             <column name="img_addr" type="varchar(400)">
                 <constraints nullable="false" unique="true"/>
@@ -100,6 +100,43 @@
             <column name="development_country" type="varchar(50)"/>
             <column name="manufacturer_country" type="varchar(50)"/>
             <column name="color" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Создание таблицы accessories-->
+    <changeSet author="FeinIV" id="120122022_initial_migration_5">
+        <createTable tableName="accessories">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false" unique="true"/>
+            </column>
+            <column name="img_addr" type="varchar(400)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="manufacturer" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="availability" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="decimal">
+                <constraints nullable="false"/>
+            </column>
+            <column name="discount" type="decimal">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="varchar(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="varchar(1000)"/>
+            <column name="material" type="varchar(100)"/>
+            <column name="development_country" type="varchar(50)"/>
+            <column name="manufacturer_country" type="varchar(50)"/>
+            <column name="color" type="varchar(50)"/>
+            <column name="size" type="varchar(200)"/>
+            <column name="features" type="varchar(300)"/>
         </createTable>
     </changeSet>
 

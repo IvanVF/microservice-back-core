@@ -7,5 +7,6 @@
     <include file="/db/changelog/migrations/12122021_initial_migration1.xml"/>
     <include file="/db/changelog/migrations/27122021_filling_bicycle_table.xml"/>
     <include file="/db/changelog/migrations/12012022_filling_scooters_table.xml"/>
+    <include file="/db/changelog/migrations/13012022_filling_accessories_table.xml"/>
 
 </databaseChangeLog>

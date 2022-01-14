@@ -6,10 +6,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "scooters")
+@Table(name = "accessories")
 @Data
 @NoArgsConstructor
-public class ScooterEntity {
+public class AccessoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,4 +50,10 @@ public class ScooterEntity {
 
     @Column(name = "color")
     String color;
+
+    @Column(name = "size")
+    String size;
+
+    @Column(name = "features")
+    String features;
 }

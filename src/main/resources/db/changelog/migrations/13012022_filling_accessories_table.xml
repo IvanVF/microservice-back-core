@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <!-- Заполнение таблицы accessories багажниками -->
+    <changeSet author="FeinIV" id="13012022_filling_accessories_table_TRUNKS">
+        <sql>
+            INSERT INTO accessories (
+            img_addr, name, manufacturer, price, discount, type, description,
+            material, development_country, manufacturer_country, color, size, features, availability
+            )
+            VALUES
+            ('assets/images/accessories_trunks/Stels 24-28ʺ BLF-H8.jpg', 'Stels 24-28ʺ BLF-H8', 'Stels', 1390, 0, 'TRUNK',
+            'Отличный велосипедный багажник BLF-H8 сделан из легкого и прочного алюминиевого сплава. Регулируемая
+            конструкция стоек позволяет использовать его на различных велосипедах с колесами от 24 до 26 дюймов.
+            Специальный зажим на пружинах поможет зафиксировать небольшую сумку или куртку. Есть крепление для заднего габаритного фонарика. Цвет - черный.',
+            'Aluminum', 'Russia', 'Russia', 'black', '24-28 inches', 'For bicycles with 24-28 inches wheels. Height regulation', 'true'
+            ),
+
+            ('assets/images/accessories_trunks/ZLYJ-A.jpg', 'ZLYJ-A', 'ZLYJ', 700, 0, 'TRUNK',
+            'Стандартный алюминиевый багажник. Подходит для установки на модели велосипедов с диаметром колес от 24 до 28 дюймов.
+            Максимальный вес, заявленный производителем - до 25 кг, но практика доказывает, что вес может быть значительно больше.',
+            'Aluminum', 'Taiwan', 'Taiwan', 'silver', '24-28 inches', 'For bicycles 24-28 inches.', 'false'
+            ),
+
+            ('assets/images/accessories_trunks/Stels BLF-H27-3 20-28ʺ.jpg', 'Stels BLF-H27-3 20-28ʺ', 'Stels', 1490, 0, 'TRUNK',
+            'Удобный и качественный консольный багажник Stels BLF-H27-3 будет отличным решением для вашего байка. Он подходит для
+            различных велосипедов с диаметром колес 20-28ʺ. Оснащен быстросъемным креплением на подседельный штырь и двумя регулируемыми стойками. Изготовлен из алюминия. Черный цвет.',
+            'Aluminum', 'Russia', 'Russia', 'black', '20-28 inches', 'For bicycles 20-28 inches. Height regulation', 'true'
+            )
+        </sql>
+    </changeSet>
+
+    <!-- Заполнение таблицы accessories насосами -->
+    <changeSet author="FeinIV" id="13012022_filling_accessories_table_PUMP">
+        <sql>
+            INSERT INTO accessories (
+            img_addr, name, manufacturer, price, discount, type, description,
+            material, development_country, manufacturer_country, color, features, availability
+            )
+            VALUES
+            ('assets/images/accessories_pumps/SKS Injex Lite Zoom, grey, plastic, telescopic.jpg', 'SKS Injex Lite Zoom, grey, plastic, telescopic', 'SKS', 1890, 0, 'PUMP',
+            'Любите поездки по горам или предпочитаете езду на треккинговых велосипедах? При этом шины подвержены достаточно
+            большой нагрузке. Чтобы обезопасить себя от неприятных ситуаций во время движения и обеспечить ощущение комфорта,
+            необходимо, чтобы шины всегда были подкачаны. Брать с собой предлагаемую нами модель компактного пластикового
+            насоса удобно, он легко крепится на раму, его вес всего 175 грамм, и он не будет отягощать велосипед. Насос имеет
+            универсальную головку с клапанами и фиксаторы для заглушки, которые не дают пыли и грязи попасть внутрь колеса, тем самым повредить его.',
+            'Plastic', 'Germany', 'Germany', 'black', null, 'true'
+            ),
+
+            ('assets/images/accessories_pumps/Giyo GF-34.jpg', 'Giyo GF-34', 'Giyo', 1990, 5, 'PUMP',
+            'Ручной напольный насос Giyo GF-34 - это выгодное и нужное приобретение для вашего гаража или мастерской.
+            С его помощью вы быстро сможете накачать колесо велосипеда. Корпус выполнен из стали. Ручка имеет эргономичную
+            Т-образную форму. Насос оснащен длинным резиновым шлангом универсальным вентилем Presta/Schrader (FV/AV). Цвет: серебристый/черный.',
+            'Steel / Plastic', 'China', 'China', 'silver / black', 'Presta/Schrader (FV/AV)', 'false'
+            ),
+
+            ('assets/images/accessories_pumps/BBB AirSteel BFP-27.jpg', 'BBB AirSteel BFP-27', 'BBB', 3790, 10, 'PUMP',
+            'BBB AirSteel BFP-27 - ручной напольный насос, который отлично подходит для мастерских или гаража. Корпус и
+            основание выполнены из прочной стали. Высота - 67 см. Внизу находится встроенный манометр со шкалами bar/psi.
+            Большая Т-образная ручка выполнена из пластика. Резиновый шланг имеет длину 90 см. На конце шланга универсальный
+            вентиль с блокировкой (подходит под клапаны Dunlop/Presta/Schrader). Максимальное нагнетаемое давление: 11 bar / 160 psi. Цвета: желтый, черный.',
+            'Steel / Plastic', 'Taiwan', 'Taiwan', 'yellow', 'Dunlop/Presta/Schrader, manometer', 'true'
+            )
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
