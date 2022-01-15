@@ -12,19 +12,19 @@
             material, development_country, manufacturer_country, color, availability
             )
             VALUES
-            ('assets/images/offroad_scooters/Rrampa C1 (230-200).jpg', 'Rrampa C1 (230-200)', 'Rrampa', 6990, 0, 'OFFROAD',
+            ('assets/images/scooters_offroad/Rrampa C1 (230-200).jpg', 'Rrampa C1 (230-200)', 'Rrampa', 6990, 0, 'OFFROAD',
             'Самокат Rrampa C1 - это отличный городской самокат, который благодаря переднему амортизатору прекрасно катит
             даже по неровному асфальту. Рама выдерживает нагрузку до 100 кг',
             'Aluminum', 'Russia', 'China', 'black', 'true'
             ),
 
-            ('assets/images/offroad_scooters/Novatrack Stamp N1 12ʺ (12STAMPN1.20).jpg', 'Novatrack Stamp N1 12ʺ (12STAMPN1.20)', 'Novatrack', 8780, 5, 'OFFROAD',
+            ('assets/images/scooters_offroad/Novatrack Stamp N1 12ʺ (12STAMPN1.20).jpg', 'Novatrack Stamp N1 12ʺ (12STAMPN1.20)', 'Novatrack', 8780, 5, 'OFFROAD',
             'Внедорожный самокат Novatrack Stamp N1 предоставляет райдеру комфортные условия для передвижения по городу
             и ровной пересеченной местности. Выдерживает нагрузку до 100 кг. Разработан для детей и подростков возрастом 6+ лет, а также взрослых.',
             'Aluminum', 'China', 'China', 'white', 'false'
             ),
 
-            ('assets/images/offroad_scooters/Razor Phase Two Dirt Scoot Diamond.jpg', 'Razor Phase Two Dirt Scoot Diamond', 'Razor', 24330, 18, 'OFFROAD',
+            ('assets/images/scooters_offroad/Razor Phase Two Dirt Scoot Diamond.jpg', 'Razor Phase Two Dirt Scoot Diamond', 'Razor', 24330, 18, 'OFFROAD',
             'Razor Phase Two Dirt Scoot Diamond - это уникальный дертовый самокат, разработанный для трюков на пересеченной местности.
             Большие накачиваемые колеса высокого давления (100 psi) с мощным протектором отлично цепляются за грунт, а профессиональные
             подшипники гарантируют отличный накат. Дека самоката имеет «полезную» площадь 13 х 37 см при общей длине конструкции 90 см.
@@ -44,19 +44,19 @@
             material, development_country, manufacturer_country, color, availability
             )
             VALUES
-            ('assets/images/city_scooters/Novatrack Polis 180 Pro (180.POLIS.9).jpg', 'Novatrack Polis 180 Pro (180.POLIS.9)', 'Novatrack', 5570, 0, 'CITY',
+            ('assets/images/scooters_city/Novatrack Polis 180 Pro (180.POLIS.9).jpg', 'Novatrack Polis 180 Pro (180.POLIS.9)', 'Novatrack', 5570, 0, 'CITY',
             'Самокат Novatrack Polis 180 Pro - это простой и доступный способ передвижения по городским улицам. С ним вы
             постоянно в движении и ежедневно даете полезную нагрузку на ваш организм. Рама выдерживает до 100 кг веса. Вес модели - 4,5 кг.',
             'Aluminum', 'China', 'China', 'orange', 'true'
             ),
 
-            ('assets/images/city_scooters/Novatrack Deft 230 Pro Brake (230BFS.DEFT.21).jpg', 'Novatrack Deft 230 Pro Brake (230BFS.DEFT.21)', 'Novatrack', 9430, 0, 'CITY',
+            ('assets/images/scooters_city/Novatrack Deft 230 Pro Brake (230BFS.DEFT.21).jpg', 'Novatrack Deft 230 Pro Brake (230BFS.DEFT.21)', 'Novatrack', 9430, 0, 'CITY',
             'Самокат Novatrack Deft 230 Pro Brake - продвинутая городская модель, на которой можно с комфортом кататься
             даже по неровному асфальту. Оснащена передним амортизатором и ручным тормозом. Рама выдерживает нагрузку до 100 кг. Вес - 5,5 кг.',
             'Aluminum', 'China', 'China', 'yellow', 'false'
             ),
 
-            ('assets/images/city_scooters/Micro Luggage RS3.0.jpg', 'Micro Luggage RS3.0', 'Micro', 25780, 6, 'CITY',
+            ('assets/images/scooters_city/Micro Luggage RS3.0.jpg', 'Micro Luggage RS3.0', 'Micro', 25780, 6, 'CITY',
             'Уникальный складной самокат, который одновременно является еще и вместительным чемоданом объемом 33 литра.
             Такой «чемокат» - просто идеальное решение для путешествий по европейским городам! Внутри имеется специальный
             отдел для планшета и ноутбука. Самокат имеет три полиуретановых колеса - два передних диаметром 120 мм и

@@ -9,35 +9,7 @@ import javax.persistence.*;
 @Table(name = "scooters")
 @Data
 @NoArgsConstructor
-public class ScooterEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "img_addr")
-    String imgAddr;
-
-    @Column(name = "name")
-    String name;
-
-    @Column(name = "manufacturer")
-    String manufacturer;
-
-    @Column(name = "availability")
-    boolean availability;
-
-    @Column(name = "price")
-    double price;
-
-    @Column(name = "discount")
-    double discount;
-
-    @Column(name = "type")
-    String type;
-
-    @Column(name = "description")
-    String description;
+public class ScooterEntity extends BaseItemEntity {
 
     @Column(name = "material")
     String material;

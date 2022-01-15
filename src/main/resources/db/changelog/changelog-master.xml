@@ -4,9 +4,10 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <include file="/db/changelog/migrations/12122021_initial_migration1.xml"/>
-    <include file="/db/changelog/migrations/27122021_filling_bicycle_table.xml"/>
-    <include file="/db/changelog/migrations/12012022_filling_scooters_table.xml"/>
-    <include file="/db/changelog/migrations/13012022_filling_accessories_table.xml"/>
+    <include file="/db/changelog/migrations/20211212_initial_migration1.xml"/>
+    <include file="/db/changelog/migrations/20211227_filling_bicycle_table.xml"/>
+    <include file="/db/changelog/migrations/20220112_filling_scooters_table.xml"/>
+    <include file="/db/changelog/migrations/20220113_filling_accessories_table.xml"/>
+    <include file="/db/changelog/migrations/20220115_filling_equipment_table.xml"/>
 
 </databaseChangeLog>

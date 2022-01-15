@@ -29,7 +29,7 @@ public class BicycleService {
         if (params.get("ids") != null) {
             bicycles = bicycleRepository.findAllById((List<Long>) params.get("ids"));
         } else if (params.get("type") != null) {
-            bicycles = bicycleRepository.findAllByBicycleType((String) params.get("type"));
+            bicycles = bicycleRepository.findAllByType((String) params.get("type"));
         } else if (params.get("name") != null) {
             bicycles = bicycleRepository.findAllByName((String) params.get("name"));
         } else {

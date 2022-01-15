@@ -9,32 +9,7 @@ import javax.persistence.*;
 @Table(name = "bicycles")
 @Data
 @NoArgsConstructor
-public class BicycleEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "img_addr")
-    String imgAddr;
-
-    @Column(name = "name")
-    String name;
-
-    @Column(name = "manufacturer")
-    String manufacturer;
-
-    @Column(name = "price")
-    double price;
-
-    @Column(name = "availability")
-    boolean availability;
-
-    @Column(name = "discount")
-    double discount;
-
-    @Column(name = "description")
-    String description;
+public class BicycleEntity extends BaseItemEntity{
 
     /**
      * Bicycle level from 1 to 8
@@ -56,12 +31,6 @@ public class BicycleEntity {
 
     @Column(name = "number_of_speeds")
     int numberOfSpeeds;
-
-    /**
-     * Gravel, mountain, woman e.t.c.
-     */
-    @Column(name = "bicycle_type")
-    String bicycleType;
 
     @Column(name = "weight")
     double weight;

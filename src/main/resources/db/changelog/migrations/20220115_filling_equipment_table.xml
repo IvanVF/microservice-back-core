@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <!-- Заполнение таблицы equipment шлемами -->
+    <changeSet author="FeinIV" id="20220115_filling_equipment_table_HELMET">
+        <sql>
+            INSERT INTO equipment (
+            img_addr, name, manufacturer, price, discount, type, description,
+            material, development_country, manufacturer_country, color, size, weight, features, availability
+            )
+            VALUES
+            ('assets/images/equipment_helmets/Casco Roadster m.V. Visor Antiscratch.jpg', 'Casco Roadster m.V. Visor Antiscratch', 'Casco', 15500, 5, 'HELMET',
+            'Прочный шлем Casco Roadster m.V. Visor Antiscratch обеспечит максимальную защиту головы при катании на велосипеде,
+            самокате или роликовых коньках. Выполнен по технологии Monocoque Ultra (усиленная конструкция со стальными заклепками).
+            Шлем имеет несколько вентиляционных отверстий, расположенных по всей длине от лба до затылка. Передние отверстия оснащены
+            сеткой против насекомых. Система застежки Casco-LOC обеспечивает быструю фиксацию шлема.',
+            'Plastic / Steel / Aluminum', 'Germany', 'Taiwan', 'black', 'S (50-54 sm), M (55-57 sm), L (58-60 sm)', '200 g.', 'Visor Antiscratch, 2 reflective stripes', 'true'
+            ),
+
+            ('assets/images/equipment_helmets/Polisport XS Kids Spaceship.jpg', 'Polisport XS Kids Spaceship', 'Polisport', 2390, 0, 'HELMET',
+            'Polisport XS Kids Lolipops - это детский комплект, включающий в себя отличный защитный шлем, питьевую флягу
+            и флягодержатель. Шлем надежной конструкции In-Mold защитит вашего малыша при катании на велосипеде, самокате
+            или беговеле, а бутылочка с водой поможет ему утолить жажду. Каска имеет 10 вентиляционных отверстий.',
+            'Plastic / EPS', 'Portugal', 'Taiwan', 'blue', 'XS', '200 g.', 'In-Mold construction, 10 air vents, insect screen, micro-adjustment ring, reflective stickers, removable pads', 'false'
+            ),
+
+            ('assets/images/equipment_helmets/MV 26 (in mold).jpg', 'MV 26 (in mold)', 'MV', 1350, 5, 'HELMET',
+            'MV 26 - ударопрочный защитный шлем. Материал изготовления - сочетание поликарбоната с пенополистиролом "In-Mold".
+            Снабжен 22 вентиляционными отверстиями. Имеется регулировка по голове.',
+            'Outer layer - polycarbonate, inner - expanded polystyrene', 'Taiwan', 'Taiwan', 'black-red', 'М (56-58 см), L (58-60 см)', '300 g.', 'In-Mold technology, 22 air vents', 'true'
+            )
+        </sql>
+    </changeSet>
+
+    <!-- Заполнение таблицы equipment рюкзаками -->
+    <changeSet author="FeinIV" id="20220115_filling_equipment_table_BACKPACK">
+        <sql>
+            INSERT INTO equipment (
+            img_addr, name, manufacturer, price, discount, type, description,
+            material, development_country, manufacturer_country, color, size, weight, volume, features, availability
+            )
+            VALUES
+            ('assets/images/equipment_backpack/Deuter Aviant Carry On 28.jpg', 'Deuter Aviant Carry On 28', 'Deuter', 12390, 10, 'BACKPACK',
+            'Удобный рюкзак Deuter Aviant Carry On 28 разработан для рабочих и туристических поездок. Его размеры полностью
+            соответствуют международным стандартам ручной клади. Объем рюкзака: 28 литров. Вес - 1030 грамм.',
+            '600D PES / 420D PA', 'Germany', null, 'black, green, blue', '50 х 33 х 20 sm', '1300 g.', '28 liter', null, 'true'
+            ),
+
+            ('assets/images/equipment_backpack/Deuter StepOut 22.jpg', 'Deuter StepOut 22', 'Deuter', 6990, 0, 'BACKPACK',
+            'Deuter StepOut 22 - вместительный городской рюкзак, который подойдет для рабочих будней и для спортивных активностей. Объем рюкзака: 22 литра. Вес - 850 грамм.',
+            '600D PES / 300D PES Ripstop', 'Germany', null, 'black, green, blue, red', '46 х 30 х 19 sm', '850 g.', '22 liter', 'ventilated back Airstripes, adjustable waist strap with buckle', 'true'
+            ),
+
+            ('assets/images/equipment_backpack/Cube Pure 11L.jpg', 'Cube Pure 11L', 'Cube', 3500, 3, 'BACKPACK',
+            'Компактный рюкзак от немецкой компании Cube, созданный специально для катания на велосипеде. Чтобы избежать
+            излишнего запотевания спины, были разработаны специальные лямки из сетчатого материала и дышащий задний слой
+            Deuter Airstripes. Вместимости 11 литров вполне достаточно, чтобы упаковать сменную футболку, набор инструментов и другую мелочевку.',
+            'Nylon', null, null, 'grey-red, black-white', '42 x 23 x 10 sm', '540 g.', '11 liter', null, 'false'
+            )
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
