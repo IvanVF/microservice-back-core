@@ -9,5 +9,6 @@
     <include file="/db/changelog/migrations/20220112_filling_scooters_table.xml"/>
     <include file="/db/changelog/migrations/20220113_filling_accessories_table.xml"/>
     <include file="/db/changelog/migrations/20220115_filling_equipment_table.xml"/>
+    <include file="/db/changelog/migrations/20220115_filling_spares_table.xml"/>
 
 </databaseChangeLog>

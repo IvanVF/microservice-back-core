@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <!-- Заполнение таблицы spares амортизаторами -->
+    <changeSet author="FeinIV" id="20220115_filling_spares_table_SHOCK">
+        <sql>
+            INSERT INTO spares (
+            img_addr, name, manufacturer, price, discount, type, description,
+            material, development_country, manufacturer_country, color, size, weight, features, availability
+            )
+            VALUES
+            ('assets/images/spares_shocks/DT Swiss M210 200 50mm LR OE.jpg', 'DT Swiss M210 200 50mm LR OE', 'DT Swiss', 10200, 5, 'SHOCK',
+            'Швейцарская компания DT Swiss является признанным производителем велосипедных комплектующих и знает толк в
+            создании амортизаторов и вилок. Задний амортизатор M210 разработан для катания в стиле All Mountain и Enduro.
+            Изготовлен из прочного алюминиевого сплава, прошедшего процесс анодирования. Размер корпуса по осям: 200 мм. Ход - 50 мм.',
+            'Aluminum', 'Switzerland', 'Switzerland', 'black, red, grey', null, '240 g.', 'oil-air', 'true'
+            ),
+
+            ('assets/images/spares_shocks/KS-290.jpg', 'KS-290', 'KS', 1890, 0, 'SHOCK',
+            'Недорогой задний амортизатор Kind Shock KS-290 разработан для любительских двухподвесов. Хода 38 мм достаточно
+            для преодоления кочек и небольших неровностей дороги. По конструкции KS-290 - это пружинно-масляный амортизатор. Длина между осями составляет 165 мм.',
+            null, 'China', 'China', 'black', null, null, 'oil-air', 'false'
+            ),
+
+            ('assets/images/spares_shocks/KS-291.jpg', 'KS-291', 'KS', 3400, 5, 'SHOCK',
+            'Пружинный воздушно-масляный задний амортизатор KS-291 Kind Shock c регулировкой сжатия пружины и отскока.
+            Роль рессоры в нем выполняют картриджи с воздухом, который закачан в нее под большим давлением. Чем больше давление воздуха тем жестче амортизатор.',
+            null, 'China', 'China', 'black', null, '300 g.', null, 'true'
+            )
+        </sql>
+    </changeSet>
+
+    <!-- Заполнение таблицы spares каретками -->
+    <changeSet author="FeinIV" id="20220115_filling_spares_table_CARRIAGE">
+        <sql>
+            INSERT INTO spares (
+            img_addr, name, manufacturer, price, discount, type, description,
+            material, development_country, manufacturer_country, color, size, weight, features, availability
+            )
+            VALUES
+            ('assets/images/spares_carriages/Shimano BB-ES51 68 121.jpg', 'Shimano BB-ES51 68 121', 'Shimano', 2440, 5, 'CARRIAGE',
+            'Shimano BB-ES51 - это надежная, проверенная под нагрузками каретка, разработанная для горных велосипедов.
+            Состоит из прочного никелированного корпуса, в который герметично запрессованы подшипники, а также хромолевой оси со шлицевым креплением для шатунов. Стандарт - Octalink.',
+            'Nickel-plated body / Cr-Mo axle', 'Japan', 'China', 'black / silver', '68/121 mm', null, 'Octalink, sealed bearings, without bolts', 'true'
+            ),
+
+            ('assets/images/spares_carriages/Shimano Saint, BB80, 83mm, BSA.jpg', 'Shimano Saint, BB80, 83мм, BSA', 'Shimano', 2190, 0, 'CARRIAGE',
+            'Каретка Shimano Saint предназначена специально для экстремальных дисциплин маунтинбайка. Каретка интегрированного
+            типа BB80 состоит из двух чашек с запрессованными в них подшипниками, ввинчивающихся в кареточный стакан.
+            Между чашками предусмотрена пластиковая проставка. Такая конструкция позволяет избежать лишней нагрузки на подшипники и защищает от попадания грязи внутрь системы.',
+            null, 'Japan', 'China', null, '83 mm', null, 'integrated', 'false'
+            ),
+
+            ('assets/images/spares_carriages/Neco B920AL 68 118mm.jpg', 'Neco B920AL 68 118mm', 'Neco', 1250, 3, 'CARRIAGE',
+            'Neco B920AL - качественная резьбовая каретка, разработанная для горных и дорожных велосипедов. Корпус выполнен из стали,
+            а резьбовые чашки - из алюминиевого сплава (стандарт резьбы BSA 1,37x24T).',
+            'Steel / Aluminum', 'Taiwan', 'Taiwan', 'silver', '68/118 mm', '302 g.', 'Threaded, 2 industrial bearings, squared axle', 'true'
+            )
+        </sql>
+    </changeSet>
+
+
+</databaseChangeLog>
