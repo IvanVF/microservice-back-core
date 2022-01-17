@@ -13,21 +13,21 @@
             )
             VALUES
             ('assets/images/spares_shocks/DT Swiss M210 200 50mm LR OE.jpg', 'DT Swiss M210 200 50mm LR OE', 'DT Swiss', 10200, 5, 'SHOCK',
-            'Швейцарская компания DT Swiss является признанным производителем велосипедных комплектующих и знает толк в
-            создании амортизаторов и вилок. Задний амортизатор M210 разработан для катания в стиле All Mountain и Enduro.
-            Изготовлен из прочного алюминиевого сплава, прошедшего процесс анодирования. Размер корпуса по осям: 200 мм. Ход - 50 мм.',
+            'The Swiss company DT Swiss is a recognized manufacturer of bicycle components and knows a lot about
+            making shock absorbers and forks. The M210 rear shock is designed for All Mountain and Enduro riding.
+            Made from durable anodized aluminum alloy. Housing size along the axes: 200 mm. Travel - 50 mm.',
             'Aluminum', 'Switzerland', 'Switzerland', 'black, red, grey', null, '240 g.', 'oil-air', 'true'
             ),
 
             ('assets/images/spares_shocks/KS-290.jpg', 'KS-290', 'KS', 1890, 0, 'SHOCK',
-            'Недорогой задний амортизатор Kind Shock KS-290 разработан для любительских двухподвесов. Хода 38 мм достаточно
-            для преодоления кочек и небольших неровностей дороги. По конструкции KS-290 - это пружинно-масляный амортизатор. Длина между осями составляет 165 мм.',
+            'Inexpensive rear shock absorber Kind Shock KS-290 is designed for amateur full-suspension. 38mm travel is enough
+            to overcome bumps and small bumps in the road. By design, the KS-290 is a spring-oil shock absorber. The length between axles is 165 mm.',
             null, 'China', 'China', 'black', null, null, 'oil-air', 'false'
             ),
 
             ('assets/images/spares_shocks/KS-291.jpg', 'KS-291', 'KS', 3400, 5, 'SHOCK',
-            'Пружинный воздушно-масляный задний амортизатор KS-291 Kind Shock c регулировкой сжатия пружины и отскока.
-            Роль рессоры в нем выполняют картриджи с воздухом, который закачан в нее под большим давлением. Чем больше давление воздуха тем жестче амортизатор.',
+            'KS-291 Kind Shock Spring Air/Oil Rear Shock with adjustable spring compression and rebound.
+            The role of the spring in it is performed by cartridges with air, which is pumped into it under high pressure. The more air pressure, the stiffer the shock absorber.',
             null, 'China', 'China', 'black', null, '300 g.', null, 'true'
             )
         </sql>
@@ -42,21 +42,21 @@
             )
             VALUES
             ('assets/images/spares_carriages/Shimano BB-ES51 68 121.jpg', 'Shimano BB-ES51 68 121', 'Shimano', 2440, 5, 'CARRIAGE',
-            'Shimano BB-ES51 - это надежная, проверенная под нагрузками каретка, разработанная для горных велосипедов.
-            Состоит из прочного никелированного корпуса, в который герметично запрессованы подшипники, а также хромолевой оси со шлицевым креплением для шатунов. Стандарт - Octalink.',
+            'The Shimano BB-ES51 is a durable, load-proven bottom bracket designed for mountain bikes.
+            It consists of a durable nickel-plated housing, into which bearings are hermetically pressed, as well as a chromoly axle with splined fastening for connecting rods. Standard - Octalink.',
             'Nickel-plated body / Cr-Mo axle', 'Japan', 'China', 'black / silver', '68/121 mm', null, 'Octalink, sealed bearings, without bolts', 'true'
             ),
 
             ('assets/images/spares_carriages/Shimano Saint, BB80, 83mm, BSA.jpg', 'Shimano Saint, BB80, 83мм, BSA', 'Shimano', 2190, 0, 'CARRIAGE',
-            'Каретка Shimano Saint предназначена специально для экстремальных дисциплин маунтинбайка. Каретка интегрированного
-            типа BB80 состоит из двух чашек с запрессованными в них подшипниками, ввинчивающихся в кареточный стакан.
-            Между чашками предусмотрена пластиковая проставка. Такая конструкция позволяет избежать лишней нагрузки на подшипники и защищает от попадания грязи внутрь системы.',
+            'The Shimano Saint bottom bracket is designed specifically for the extreme disciplines of mountain biking. Integrated carriage
+            type BB80 consists of two cups with bearings pressed into them, screwed into the bottom bracket shell.
+            There is a plastic spacer between the cups. This design avoids unnecessary load on the bearings and protects against dirt ingress into the system.',
             null, 'Japan', 'China', null, '83 mm', null, 'integrated', 'false'
             ),
 
             ('assets/images/spares_carriages/Neco B920AL 68 118mm.jpg', 'Neco B920AL 68 118mm', 'Neco', 1250, 3, 'CARRIAGE',
-            'Neco B920AL - качественная резьбовая каретка, разработанная для горных и дорожных велосипедов. Корпус выполнен из стали,
-            а резьбовые чашки - из алюминиевого сплава (стандарт резьбы BSA 1,37x24T).',
+            'The Neco B920AL is a quality threaded bottom bracket designed for mountain and road bikes. The body is made of steel
+            and the threaded cups are made of aluminum alloy (BSA thread standard 1.37x24T).',
             'Steel / Aluminum', 'Taiwan', 'Taiwan', 'silver', '68/118 mm', '302 g.', 'Threaded, 2 industrial bearings, squared axle', 'true'
             )
         </sql>

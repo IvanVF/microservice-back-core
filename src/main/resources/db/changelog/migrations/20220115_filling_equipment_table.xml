@@ -13,23 +13,23 @@
             )
             VALUES
             ('assets/images/equipment_helmets/Casco Roadster m.V. Visor Antiscratch.jpg', 'Casco Roadster m.V. Visor Antiscratch', 'Casco', 15500, 5, 'HELMET',
-            'Прочный шлем Casco Roadster m.V. Visor Antiscratch обеспечит максимальную защиту головы при катании на велосипеде,
-            самокате или роликовых коньках. Выполнен по технологии Monocoque Ultra (усиленная конструкция со стальными заклепками).
-            Шлем имеет несколько вентиляционных отверстий, расположенных по всей длине от лба до затылка. Передние отверстия оснащены
-            сеткой против насекомых. Система застежки Casco-LOC обеспечивает быструю фиксацию шлема.',
+            'Rugged helmet Casco Roadster m.V. Visor Antiscratch will provide maximum head protection when cycling,
+            scooter or roller skates. Made using Monocoque Ultra technology (reinforced construction with steel rivets).
+            The helmet has several ventilation holes located along the entire length from the forehead to the back of the head. The front openings are equipped
+            insect net. The Casco-LOC fastening system provides a quick fixation of the helmet.',
             'Plastic / Steel / Aluminum', 'Germany', 'Taiwan', 'black', 'S (50-54 sm), M (55-57 sm), L (58-60 sm)', '200 g.', 'Visor Antiscratch, 2 reflective stripes', 'true'
             ),
 
             ('assets/images/equipment_helmets/Polisport XS Kids Spaceship.jpg', 'Polisport XS Kids Spaceship', 'Polisport', 2390, 0, 'HELMET',
-            'Polisport XS Kids Lolipops - это детский комплект, включающий в себя отличный защитный шлем, питьевую флягу
-            и флягодержатель. Шлем надежной конструкции In-Mold защитит вашего малыша при катании на велосипеде, самокате
-            или беговеле, а бутылочка с водой поможет ему утолить жажду. Каска имеет 10 вентиляционных отверстий.',
+            'Polisport XS Kids Lolipops is a children''s kit that includes a great safety helmet, drinking flask
+            and a bottle holder. A rugged, in-mold helmet will protect your little one when riding a bike or scooter
+            or a balance bike, and a bottle of water will help him quench his thirst. The helmet has 10 ventilation holes.',
             'Plastic / EPS', 'Portugal', 'Taiwan', 'blue', 'XS', '200 g.', 'In-Mold construction, 10 air vents, insect screen, micro-adjustment ring, reflective stickers, removable pads', 'false'
             ),
 
             ('assets/images/equipment_helmets/MV 26 (in mold).jpg', 'MV 26 (in mold)', 'MV', 1350, 5, 'HELMET',
-            'MV 26 - ударопрочный защитный шлем. Материал изготовления - сочетание поликарбоната с пенополистиролом "In-Mold".
-            Снабжен 22 вентиляционными отверстиями. Имеется регулировка по голове.',
+            'MV 26 is a high impact safety helmet. Production material - a combination of polycarbonate with expanded polystyrene "In-Mold".
+            Equipped with 22 ventilation holes. There is an adjustment for the head.',
             'Outer layer - polycarbonate, inner - expanded polystyrene', 'Taiwan', 'Taiwan', 'black-red', 'М (56-58 см), L (58-60 см)', '300 g.', 'In-Mold technology, 22 air vents', 'true'
             )
         </sql>
@@ -44,20 +44,20 @@
             )
             VALUES
             ('assets/images/equipment_backpack/Deuter Aviant Carry On 28.jpg', 'Deuter Aviant Carry On 28', 'Deuter', 12390, 10, 'BACKPACK',
-            'Удобный рюкзак Deuter Aviant Carry On 28 разработан для рабочих и туристических поездок. Его размеры полностью
-            соответствуют международным стандартам ручной клади. Объем рюкзака: 28 литров. Вес - 1030 грамм.',
+            'The comfortable Deuter Aviant Carry On 28 backpack is designed for work and leisure trips. Its dimensions are completely
+            comply with international hand luggage standards. Backpack volume: 28 liters. Weight - 1030 grams.',
             '600D PES / 420D PA', 'Germany', null, 'black, green, blue', '50 х 33 х 20 sm', '1300 g.', '28 liter', null, 'true'
             ),
 
             ('assets/images/equipment_backpack/Deuter StepOut 22.jpg', 'Deuter StepOut 22', 'Deuter', 6990, 0, 'BACKPACK',
-            'Deuter StepOut 22 - вместительный городской рюкзак, который подойдет для рабочих будней и для спортивных активностей. Объем рюкзака: 22 литра. Вес - 850 грамм.',
+            'The Deuter StepOut 22 is a roomy city backpack that is suitable for everyday work and sports activities. Backpack volume: 22 liters. Weight - 850 grams.',
             '600D PES / 300D PES Ripstop', 'Germany', null, 'black, green, blue, red', '46 х 30 х 19 sm', '850 g.', '22 liter', 'ventilated back Airstripes, adjustable waist strap with buckle', 'true'
             ),
 
             ('assets/images/equipment_backpack/Cube Pure 11L.jpg', 'Cube Pure 11L', 'Cube', 3500, 3, 'BACKPACK',
-            'Компактный рюкзак от немецкой компании Cube, созданный специально для катания на велосипеде. Чтобы избежать
-            излишнего запотевания спины, были разработаны специальные лямки из сетчатого материала и дышащий задний слой
-            Deuter Airstripes. Вместимости 11 литров вполне достаточно, чтобы упаковать сменную футболку, набор инструментов и другую мелочевку.',
+            'A compact backpack from the German company Cube, designed specifically for cycling. To avoid
+            excessive sweating of the back, special mesh material shoulder straps and a breathable back layer have been developed
+            Deuter Airstripes. The capacity of 11 liters is enough to pack a spare T-shirt, a set of tools and other small items.',
             'Nylon', null, null, 'grey-red, black-white', '42 x 23 x 10 sm', '540 g.', '11 liter', null, 'false'
             )
         </sql>

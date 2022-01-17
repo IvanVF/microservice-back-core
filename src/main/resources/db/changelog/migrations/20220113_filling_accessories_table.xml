@@ -13,21 +13,22 @@
             )
             VALUES
             ('assets/images/accessories_trunks/Stels 24-28ʺ BLF-H8.jpg', 'Stels 24-28ʺ BLF-H8', 'Stels', 1390, 0, 'TRUNK',
-            'Отличный велосипедный багажник BLF-H8 сделан из легкого и прочного алюминиевого сплава. Регулируемая
-            конструкция стоек позволяет использовать его на различных велосипедах с колесами от 24 до 26 дюймов.
-            Специальный зажим на пружинах поможет зафиксировать небольшую сумку или куртку. Есть крепление для заднего габаритного фонарика. Цвет - черный.',
+            'The excellent bike rack BLF-H8 is made of lightweight and durable aluminum alloy. Adjustable
+            the design of the racks allows it to be used on a variety of bikes with wheels from 24 to 26 inches.
+            A special clip on the springs will help fix a small bag or jacket. There is a mount for a tail light. Black colour.',
             'Aluminum', 'Russia', 'Russia', 'black', '24-28 inches', 'For bicycles with 24-28 inches wheels. Height regulation', 'true'
             ),
 
             ('assets/images/accessories_trunks/ZLYJ-A.jpg', 'ZLYJ-A', 'ZLYJ', 700, 0, 'TRUNK',
-            'Стандартный алюминиевый багажник. Подходит для установки на модели велосипедов с диаметром колес от 24 до 28 дюймов.
-            Максимальный вес, заявленный производителем - до 25 кг, но практика доказывает, что вес может быть значительно больше.',
+            'Standard aluminum trunk. Suitable for bikes with 24" to 28" wheels.
+            The maximum weight declared by the manufacturer is up to 25 kg, but practice proves that the weight can be much more.',
             'Aluminum', 'Taiwan', 'Taiwan', 'silver', '24-28 inches', 'For bicycles 24-28 inches.', 'false'
             ),
 
             ('assets/images/accessories_trunks/Stels BLF-H27-3 20-28ʺ.jpg', 'Stels BLF-H27-3 20-28ʺ', 'Stels', 1490, 0, 'TRUNK',
-            'Удобный и качественный консольный багажник Stels BLF-H27-3 будет отличным решением для вашего байка. Он подходит для
-            различных велосипедов с диаметром колес 20-28ʺ. Оснащен быстросъемным креплением на подседельный штырь и двумя регулируемыми стойками. Изготовлен из алюминия. Черный цвет.',
+            'Comfortable and high-quality console rack Stels BLF-H27-3 will be a great solution for your bike. It is suitable for
+            various bicycles with a wheel diameter of 20-28ʺ. Equipped with a quick-release seatpost mount and two
+            adjustable posts. Made from aluminium. Black color.',
             'Aluminum', 'Russia', 'Russia', 'black', '20-28 inches', 'For bicycles 20-28 inches. Height regulation', 'true'
             )
         </sql>
@@ -42,26 +43,26 @@
             )
             VALUES
             ('assets/images/accessories_pumps/SKS Injex Lite Zoom, grey, plastic, telescopic.jpg', 'SKS Injex Lite Zoom, grey, plastic, telescopic', 'SKS', 1890, 0, 'PUMP',
-            'Любите поездки по горам или предпочитаете езду на треккинговых велосипедах? При этом шины подвержены достаточно
-            большой нагрузке. Чтобы обезопасить себя от неприятных ситуаций во время движения и обеспечить ощущение комфорта,
-            необходимо, чтобы шины всегда были подкачаны. Брать с собой предлагаемую нами модель компактного пластикового
-            насоса удобно, он легко крепится на раму, его вес всего 175 грамм, и он не будет отягощать велосипед. Насос имеет
-            универсальную головку с клапанами и фиксаторы для заглушки, которые не дают пыли и грязи попасть внутрь колеса, тем самым повредить его.',
+            'Do you like mountain trips or do you prefer trekking bikes? At the same time, the tires are subject to sufficient
+            big load. To protect yourself from unpleasant situations while driving and ensure a feeling of comfort,
+            Tires must always be inflated. Take with you the model of the compact plastic
+            pump is convenient, it is easily attached to the frame, its weight is only 175 grams, and it will not weigh down the bike. The pump has
+            a universal head with valves and clamps for the plug, which prevent dust and dirt from getting inside the wheel, thereby damaging it.',
             'Plastic', 'Germany', 'Germany', 'black', null, 'true'
             ),
 
             ('assets/images/accessories_pumps/Giyo GF-34.jpg', 'Giyo GF-34', 'Giyo', 1990, 5, 'PUMP',
-            'Ручной напольный насос Giyo GF-34 - это выгодное и нужное приобретение для вашего гаража или мастерской.
-            С его помощью вы быстро сможете накачать колесо велосипеда. Корпус выполнен из стали. Ручка имеет эргономичную
-            Т-образную форму. Насос оснащен длинным резиновым шлангом универсальным вентилем Presta/Schrader (FV/AV). Цвет: серебристый/черный.',
+            'The Giyo GF-34 manual floor pump is a profitable and necessary purchase for your garage or workshop.
+            With it, you can quickly pump up the wheel of the bike. The body is made of steel. The handle has an ergonomic
+            T-shape. The pump is equipped with a long rubber hose and a Presta/Schrader universal valve (FV/AV). Color: silver/black.',
             'Steel / Plastic', 'China', 'China', 'silver / black', 'Presta/Schrader (FV/AV)', 'false'
             ),
 
             ('assets/images/accessories_pumps/BBB AirSteel BFP-27.jpg', 'BBB AirSteel BFP-27', 'BBB', 3790, 10, 'PUMP',
-            'BBB AirSteel BFP-27 - ручной напольный насос, который отлично подходит для мастерских или гаража. Корпус и
-            основание выполнены из прочной стали. Высота - 67 см. Внизу находится встроенный манометр со шкалами bar/psi.
-            Большая Т-образная ручка выполнена из пластика. Резиновый шланг имеет длину 90 см. На конце шланга универсальный
-            вентиль с блокировкой (подходит под клапаны Dunlop/Presta/Schrader). Максимальное нагнетаемое давление: 11 bar / 160 psi. Цвета: желтый, черный.',
+            'The BBB AirSteel BFP-27 is a manual floor pump that is great for workshops or the garage. Corps and
+            The base is made of solid steel. Height - 67 cm. At the bottom there is a built-in pressure gauge with bar / psi scales.
+            The large T-handle is made of plastic. The rubber hose is 90 cm long. At the end of the hose there is a universal
+            block valve (suitable for Dunlop/Presta/Schrader valves). Maximum delivery pressure: 11 bar / 160 psi. Colors: yellow, black.',
             'Steel / Plastic', 'Taiwan', 'Taiwan', 'yellow', 'Dunlop/Presta/Schrader, manometer', 'true'
             )
         </sql>
