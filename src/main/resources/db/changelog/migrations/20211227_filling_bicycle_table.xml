@@ -14,10 +14,10 @@
             )
             VALUES
             ('assets/images/bicycles_woman/Stels Navigator 245 26 Z010 (2020).jpg', 'Stels Navigator 245 26 Z010 (2020)', 'Stels', 15210, 15,
-            'Женский дорожный велосипед без переключения передач. Технические особенности: прочная стальная рама
-            Hi-Ten, жесткая стальная вилка, двойные алюминиевые обода, ножные педальные тормоза, защита цепи, длинные крылья,
-            багажник, передняя корзина, звонок. Подходит для прогулочной езды по шоссе и ровным проселочным дорогам.
-            Диаметр колес - 26 дюймов. Вес - 16,6 кг.',
+            'Women''s road bike without gear shifting. Technical features: durable steel frame
+            Hi-Ten, rigid steel fork, double aluminum rims, foot pedal brakes, chain guard, long fenders,
+            trunk, front basket, bell. Suitable for pleasure riding on highways and flat country roads.
+            Wheel diameter - 26 inches. Weight - 16.6 kg.',
             1, 'Steel', 'Regid', 'Steel', 'Regid steel fork from Stels manufacturer', '1', 'WOMAN', '17.43', '26 inches',
             'Double', 'Foot pedal', 'Female', 'true'
             ),

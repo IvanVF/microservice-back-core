@@ -10,5 +10,6 @@
     <include file="/db/changelog/migrations/20220113_filling_accessories_table.xml"/>
     <include file="/db/changelog/migrations/20220115_filling_equipment_table.xml"/>
     <include file="/db/changelog/migrations/20220115_filling_spares_table.xml"/>
+    <include file="/db/changelog/migrations/20220116_filling_product_type_description_table.xml.xml"/>
 
 </databaseChangeLog>

@@ -218,4 +218,20 @@
         </createTable>
     </changeSet>
 
+    <!-- Создание таблицы product_type_description-->
+    <changeSet author="FeinIV" id="20220116_initial_migration_8">
+        <createTable tableName="product_type_description">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false" unique="true"/>
+            </column>
+            <!-- name = "'PRODUCT GROUP' + '_' + 'PRODUCT TYPE'". Example: "ACCESSORIES_TRUNC", "BICYCLES_WOMAN" -->
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="description" type="varchar(10000)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
 </databaseChangeLog>

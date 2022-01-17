@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <!-- Заполнение таблицы product_type_description амортизаторами -->
+    <changeSet author="FeinIV" id="20220116_filling_product_type_description">
+        <sql>
+            INSERT INTO product_type_description (
+            name, description
+            )
+            VALUES
+            ('BICYCLES_WOMAN',
+            'The main difference between a women''s bike and a mens bike is the use of a lowered frame, which guarantees
+            a comfortable fit in any clothing. Manufacturers also seek to reduce the weight of the structure through the
+            use of modern and more expensive metal alloys. Despite the limitations associated with these features, among
+            women''s bikes you can choose a model for almost any style of riding - from pleasure to sports. The latter are
+            in high demand among girls who actively monitor their physical form.'
+            ),
+
+            ('BICYCLES_CHILDREN',
+            'Children''s bicycles are usually classified by wheel diameter: for kids from 1.5 to 3 years old, 12-inch
+            wheels are suitable, for children from 2 to 4 years old - wheels with a diameter of 14 inches, 16-inch - for
+            the age category from 3 to 5 years, and wheels 20- ty inches - for children under 9 years old. Also, in
+            addition to the classic two- and three-wheeled bicycles, recently balance bikes have become more and more
+            popular among young athletes, which are something in between scooters and a bicycle in design.'
+            ),
+
+            ('BICYCLES_ROAD',
+            'Road bikes are a continuation of the hardtail line.
+            The production is based on the manufacture of a classic rigid frame and fork made of high-strength steel
+            alloy. Thanks to this technology, maximum acceleration is ensured without loss of travel (it is not
+            extinguished by swinging the shock absorber). Road bikes are lighter than hardtails and therefore have better
+            ride. Since this type is used mainly for driving on highway surfaces, the models are equipped with "bald"
+            tires - they are narrower and more maneuverable. It is also important that the seating position on road bikes
+            ensures that the cyclist''s back is in a comfortable position. Key models in the range come with a set of
+            reflectors and protective fenders for the wheels and trunk.'
+            ),
+
+            ('BICYCLES_COMFORT',
+            'The design of a comfortable bike, as the name suggests, is embodied with the goal of the most comfortable
+            riding, mainly in urban and other "non-extreme" conditions. The characteristic features of such bicycles are
+            a high seating position and a comfortable wide seat. Comfort bikes are divided into hardtails, with suspension
+            forks, and cruisers, in the development of which the emphasis is primarily on design and aesthetics.'
+            ),
+
+            ('BICYCLES_GRAVEL',
+            'The gravel bike is a new take on the concept of a comfortable road bike. What distinguishes it from classic
+            road models is a longer wheelbase, larger tires, disc brakes and a frame geometry that is somewhere between
+            road and MTB. A gravel bike can be called a crossover from the cycling world. It gives increased comfort and
+            maneuverability at the cost of slightly increased weight and worse maneuverability. If you love the aesthetics
+            of classic road bikes, but don''t think it''s a smart idea to buy all-terrain sports gear, a gravel bike is the way to go!'
+            ),
+
+            ('SCOOTERS_CITY',
+            'For mobility in a big city, fast and useful movement, you should buy a city scooter - an actual type of
+            transport in a metropolis. Models for city driving have a strong frame designed for different rider weights
+            up to 100 kg, a handlebar adjustable for the appropriate height, polyurethane wheels with a diameter of 125
+            to 200 mm and, of course, a modern design. The platform is ideal for a comfortable ride, many deck models have
+            an anti-slip coating. Compact, practical and lightweight urban scooter, thanks to a reliable mechanism, can
+            be easily folded for transportation in public transport. These are maneuverable and reliable units equipped
+            with ergonomic grips, parking steps, foot or front brake.'
+            ),
+
+            ('SCOOTERS_OFFROAD',
+            'You can ride a scooter not only on flat park paths, but also on rough terrain. For these purposes, there is
+            a special model - an off-road scooter with increased cross-country ability. Such models have a steel frame
+            and fork, fenders and reflective elements, a footrest, a trunk for small things. They have a fairly wide deck,
+            inflatable wheels, durable aluminum rims, most often 12 inches in diameter. In urban conditions, an off-road
+            scooter gives a good roll, and on rough terrain - increased cross-country ability. There are also models on
+            polyurethane wheels, with an enlarged front rim. For different weight and height of the rider, children''s and
+            teenage models, as well as an adult off-road scooter, are designed. SUVs are equipped with both rear and front brakes.'
+            ),
+
+            ('ACCESSORIES_TRUNK',
+            'Bicycle racks are a device that makes it much easier to carry cargo on your bike. Now, when there are many
+            varieties of them, the choice of this convenient accessory is not difficult. A non-separable bike rack is
+            able to withstand a load of up to 25 kg, and also guarantee the possibility of holding a bike backpack on it.
+            Manufacturers prefer to use steel, titanium and aluminum for luggage carriers. Steel trunks, with their strength
+            and reliability, have a fairly large weight of the structure. Titanium are less common; they have a high cost
+            and wear resistance. According to the types of fastening, bike racks are divided into 4 classes: a rack mounted
+            on the seatpost with a clip; trunk attached to the rooster and the upper feathers of the rear triangle; with
+            fastening only to feathers with the help of clamps; bolted to the seat tube. You can choose a bike rack for
+            any type from any line of bikes.'
+            ),
+
+            ('ACCESSORIES_PUMP',
+            'Maintaining the required predetermined pressure in the chambers is impossible without a pump. It is a
+            mandatory attribute of a cyclist. Among the types of pumps are stationary and portable. Each type has
+            advantages. A stationary pump will be useful and convenient for use at home or in a bike shop, while a
+            portable one is on the go. Modern bicycle pumps are almost universal: the presence of two heads - "presto"
+            and auto - allow them to be used on any models of bicycles.'
+            ),
+
+            ('EQUIPMENT_HELMET',
+            'Alas, no one is immune from falls and injuries. Fans of extreme riding in the style of trial, street, freeride,
+            downhill and other types of it know the need to protect themselves. Bicycle helmets are reliable protection
+            against drops and bumps. Made of high-strength plastic, they have a streamlined shape that seems to "cut" the
+            air. Many types and types of helmets will help you choose the best option.'
+            ),
+
+            ('ACCESSORIES_BACKPACK',
+            'A bicycle backpack differs from a regular city backpack, first of all, by its anatomical shape and the presence
+            of a special breathable back that removes moisture and heat. Also, such backpacks, as a rule, are equipped
+            with a special compartment for a hydrator, eliminating the need for a cyclist to carry a water bottle or flask
+            with them. The size of the backpack is selected depending on the tasks and the amount of equipment carried.
+            Manufacturers produce models from small ones - up to 10 liters, and up to large 30-liter options.'
+            )
+
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
