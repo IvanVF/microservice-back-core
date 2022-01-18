@@ -100,12 +100,30 @@
             air. Many types and types of helmets will help you choose the best option.'
             ),
 
-            ('ACCESSORIES_BACKPACK',
+            ('EQUIPMENT_BACKPACK',
             'A bicycle backpack differs from a regular city backpack, first of all, by its anatomical shape and the presence
             of a special breathable back that removes moisture and heat. Also, such backpacks, as a rule, are equipped
             with a special compartment for a hydrator, eliminating the need for a cyclist to carry a water bottle or flask
             with them. The size of the backpack is selected depending on the tasks and the amount of equipment carried.
             Manufacturers produce models from small ones - up to 10 liters, and up to large 30-liter options.'
+            ),
+
+            ('SPARES_SHOCK',
+            'To convert mechanical energy into thermal energy on bicycles, a device such as a shock absorber is used.
+            While riding on rough terrain or a country road, it will dampen vibrations from shocks and surges that act
+            on the frame. Bicycle shock absorbers are often used in conjunction with springs, leaf springs, pillows or
+            torsion bars. For beginners, spring shock absorbers mounted on the rear suspension are suitable, while
+            advanced cyclists are air shock absorbers: they have less weight with wider adjustment possibilities. Shock
+            absorbers are a must for those who are fond of extreme types of skiing: downhill, street, dirt and others.'
+            ),
+
+            ('SPARES_CARRIAGE',
+            'A bicycle carriage is a node that makes the wheel rotate, and is also responsible for the rotation of the
+            cranks with pedals and stars. Based on how the carriage is attached to the connecting rods, there are two
+            types of them: for wedges, slotted and square. The latter is more common, since it provides a more rigid
+            fastening of the connecting rods with carriages. Slotted are suitable for mountain or road bikes, as they
+            are designed for more intense loads. Our catalog contains carriages from different manufacturers, suitable
+            for any models and types of bicycles.'
             )
 
         </sql>
