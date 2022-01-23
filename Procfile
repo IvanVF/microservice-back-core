@@ -1,1 +1,1 @@
-web: java -jar build/libs/microservice-back-core-1.0.jar
+web: java $JAVA_OPTS -jar app.jar

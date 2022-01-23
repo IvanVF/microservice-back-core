@@ -7,7 +7,7 @@ plugins {
 jar {
 	manifest {
 		attributes(
-				'Main-Class': 'backcore.BackCoreApplication.class'
+				'Main-Class': 'backcore.BackCoreApplication'
 		)
 	}
 }
@@ -42,12 +42,17 @@ dependencies {
 	//testImplementation 'org.springframework.security:spring-security-test'
 }
 
-task stage(type: Copy, dependsOn: [build]) {
+task stage(type: Copy, dependsOn: [clean, build]) {
 	from jar.archivePath
 	into project.rootDir
 	rename {
 		'app.jar'
 	}
+}
+stage.mustRunAfter(clean)
+
+clean {
+	project.file('app.jar').delete()
 }
 
 test {
