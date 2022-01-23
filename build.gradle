@@ -7,7 +7,7 @@ plugins {
 jar {
 	manifest {
 		attributes(
-				'Main-Class': 'backcore.BackCoreApplication'
+				'Main-Class': 'backcore.BackCoreApplication.class'
 		)
 	}
 }
