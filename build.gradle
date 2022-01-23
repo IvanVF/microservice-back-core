@@ -34,7 +34,7 @@ dependencies {
 	//testImplementation 'org.springframework.security:spring-security-test'
 }
 
-task stage(type: Copy, dependsOn: [clean, build]) {
+task stage(type: Copy, dependsOn: [clean,build]) {
 	from jar.archivePath
 	into project.rootDir
 	rename {
