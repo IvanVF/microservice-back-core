@@ -4,6 +4,14 @@ plugins {
 	id 'java'
 }
 
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'backcore.BackCoreApplication'
+		)
+	}
+}
+
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -34,7 +42,7 @@ dependencies {
 	//testImplementation 'org.springframework.security:spring-security-test'
 }
 
-task stage(type: Copy, dependsOn: [clean,build]) {
+task stage(type: Copy, dependsOn: [build]) {
 	from jar.archivePath
 	into project.rootDir
 	rename {
