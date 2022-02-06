@@ -27,4 +27,12 @@ public class SpareService {
         }
         return spares;
     }
+
+    public List<String> getSparesTypes() {
+        return spareRepository.getSparesTypes();
+    }
+
+    public List<String> getSparesManufacturers(String type) {
+        return spareRepository.getSparesManufacturers(type);
+    }
 }

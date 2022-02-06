@@ -27,4 +27,12 @@ public class EquipmentService {
         }
         return equimpments;
     }
+
+    public List<String> getEquipmentsTypes() {
+        return equipmentRepository.getEquipmentTypes();
+    }
+
+    public List<String> getEquipmentsManufacturers(String type) {
+        return equipmentRepository.getEquipmentManufacturers(type);
+    }
 }
