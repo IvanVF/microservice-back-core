@@ -37,4 +37,12 @@ public class BicycleService {
         }
         return bicycles;
     }
+
+    public List<String> getBicycleTypes() {
+        return bicycleRepository.getBicycleTypes();
+    }
+
+    public List<String> getBicycleManufacturers(String type) {
+        return bicycleRepository.getBicycleManufacturers(type);
+    }
 }

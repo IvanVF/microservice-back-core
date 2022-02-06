@@ -27,4 +27,12 @@ public class ScooterService {
         }
         return scooters;
     }
+
+    public List<String> getScootersTypes() {
+        return scooterRepository.getScootersTypes();
+    }
+
+    public List<String> getScootersManufacturers(String type) {
+        return scooterRepository.getScootersManufacturers(type);
+    }
 }

@@ -4,7 +4,7 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <!-- Заполнение таблицы product_type_description амортизаторами -->
+    <!-- Заполнение таблицы product_type_description -->
     <changeSet author="FeinIV" id="20220116_filling_product_type_description">
         <sql>
             INSERT INTO product_type_description (

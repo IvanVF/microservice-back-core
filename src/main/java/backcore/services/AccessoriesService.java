@@ -28,4 +28,12 @@ public class AccessoriesService {
         return accessories;
     }
 
+    public List<String> getAccessoriesTypes() {
+        return accessoriesRepository.getAccessoriesTypes();
+    }
+
+    public List<String> getAccessoriesManufacturers(String type) {
+        return accessoriesRepository.getAccessoriesManufacturers(type);
+    }
+
 }
