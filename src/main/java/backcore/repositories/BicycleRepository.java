@@ -10,8 +10,6 @@ import java.util.List;
 
 @Repository
 public interface BicycleRepository extends JpaRepository<BicycleEntity, Long> {
-    List<BicycleEntity> findAllByType(String type);
-    List<BicycleEntity> findAllByName(String name);
 
     /**
      * Load available bicycle types
