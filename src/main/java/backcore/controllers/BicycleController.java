@@ -80,6 +80,11 @@ public class BicycleController {
         return bicycleService.getBicycleManufacturers(type);
     }
 
+    @GetMapping(path = "/search_string")
+    public List<BicycleEntity> getBicyclesBySearchString(@RequestParam(name = "searchString") String searchString) {
+        return bicycleService.getBicyclesBySearchString(searchString);
+    }
+
 }
 
 

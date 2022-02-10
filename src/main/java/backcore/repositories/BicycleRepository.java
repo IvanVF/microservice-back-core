@@ -25,4 +25,11 @@ public interface BicycleRepository extends JpaRepository<BicycleEntity, Long> {
     @Query("SELECT DISTINCT bicycles.manufacturer FROM BicycleEntity bicycles where bicycles.type = ?1")
     List<String> getBicycleManufacturers(String type);
 
+    @Query(nativeQuery=true, value="SELECT * FROM bicycles\n" +
+            "where bicycles.name ILIKE ?1||'%'\n" +
+            "OR (bicycles.name ILIKE substring(?1||'%' from '^(.*?) ')||'%'\n " +
+            "and concat_ws(' ',bicycles.name) ILIKE ?1||'%') " +
+            "ORDER BY bicycles.name")
+    List<BicycleEntity> getBicyclesBySearchString(String searchString);
+
 }

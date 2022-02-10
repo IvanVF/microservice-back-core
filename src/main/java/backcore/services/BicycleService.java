@@ -91,4 +91,8 @@ public class BicycleService {
 
         return entityManager.createQuery(query).getResultList();
     }
+
+    public List<BicycleEntity> getBicyclesBySearchString(String searchString) {
+        return bicycleRepository.getBicyclesBySearchString(searchString);
+    }
 }
