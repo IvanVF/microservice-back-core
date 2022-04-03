@@ -27,25 +27,36 @@ public class BicycleController {
     @GetMapping
     public List<BicycleEntity> getBicycles(@RequestParam(name = "ids", required = false) List<Long> ids,
                                             @RequestParam(name = "name", required = false) String name,
-                                            @RequestParam(name = "priceFrom", required = false) String priceFrom,
-                                            @RequestParam(name = "priceTo", required = false) String priceTo,
+                                            @RequestParam(name = "priceFrom", required = false) String priceFromString,
+                                            @RequestParam(name = "priceTo", required = false) String priceToString,
                                             @RequestParam(name = "isInStock", required = false, defaultValue = "false") Boolean isInStock,
                                             @RequestParam(name = "isHaveDiscount", required = false, defaultValue = "false") Boolean isHaveDiscount,
                                             @RequestParam(name = "type", required = false) String type,
-                                            @RequestParam(name = "manufacturer", required = false) String manufacturer) {
+                                            @RequestParam(name = "manufacturer", required = false) String manufacturer,
+                                            @RequestParam(name = "page", required = false, defaultValue = "1") String pageString,
+                                            @RequestParam(name = "perPage", required = false, defaultValue = "15") String perPageString) {
 
-        Double priceFromConverted = 0.0;
-        Double priceToConverted = 0.0;
-        if (priceFrom != null && !priceFrom.equals("null")) {
+        Double priceFrom = 0.0;
+        Double priceTo = 0.0;
+        Integer page = 1;
+        Integer perPage = 15;
+        try {
+            page = Integer.valueOf(pageString);
+            perPage = Integer.valueOf(perPageString);
+        } catch (ClassCastException e) {
+            System.out.println("Can't cast page or perPage. " + e.getMessage());
+        }
+
+        if (priceFromString != null && !priceFromString.equals("null")) {
             try {
-                priceFromConverted = Double.parseDouble(priceFrom);
+                priceFrom = Double.parseDouble(priceFromString);
             } catch (ClassCastException e) {
                 System.out.println("Wrong priceFrom" + e.getMessage());
             }
         }
-        if (priceTo != null && !priceTo.equals("null")) {
+        if (priceToString != null && !priceToString.equals("null")) {
             try {
-                priceToConverted = Double.parseDouble(priceTo);
+                priceTo = Double.parseDouble(priceToString);
             } catch (ClassCastException e) {
                 System.out.println("Wrong price to. " + e.getMessage());
             }
@@ -54,12 +65,14 @@ public class BicycleController {
         Map<String, Object> params = new HashMap<>();
         params.put("ids", ids);
         params.put("name", name);
-        params.put("priceFrom", priceFromConverted);
-        params.put("priceTo", priceToConverted);
+        params.put("priceFrom", priceFrom);
+        params.put("priceTo", priceTo);
         params.put("isInStock", isInStock);
         params.put("isHaveDiscount", isHaveDiscount);
         params.put("type", type);
         params.put("manufacturer", manufacturer);
+        params.put("page", page);
+        params.put("perPage", perPage);
 
         return bicycleService.getBicycles(params, ids);
     }

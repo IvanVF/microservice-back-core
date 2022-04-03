@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.criteria.*;
 import java.util.*;
 
@@ -41,9 +42,12 @@ public class BicycleService {
      */
     public List<BicycleEntity> getBicycles(Map<String, Object> params, List<Long> ids) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Long> countQuery = criteriaBuilder.createQuery(Long.class);
         CriteriaQuery<BicycleEntity> query = criteriaBuilder.createQuery(BicycleEntity.class);
         Root<BicycleEntity> bicycle = query.from(BicycleEntity.class);
 
+        countQuery.select(criteriaBuilder.count(countQuery.from(BicycleEntity.class)));
+        Long count = entityManager.createQuery(countQuery).getSingleResult();
         Predicate criteria = criteriaBuilder.conjunction();
 
         if (ids != null) {
@@ -87,7 +91,10 @@ public class BicycleService {
             Predicate p = criteriaBuilder.greaterThan(bicycle.get("discount"), 0);
             criteria = criteriaBuilder.and(criteria, p);
         }
+        
         query.where(criteria);
+
+        int totalPages = entityManager.createQuery(query).getResultList().size();
 
         return entityManager.createQuery(query).getResultList();
     }
