@@ -3,31 +3,128 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-    <!-- Создание таблицы users-->
+    <!-- Create table users-->
     <changeSet author="FeinIV" id="20211212_initial_migration_1">
         <createTable tableName="users">
             <column name="id" type="serial">
-                <constraints primaryKey="true" nullable="false" unique="true" />
+                <constraints primaryKey="true" nullable="false" unique="true"/>
+            </column>
+            <column name="username" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
             </column>
             <column name="first_name" type="varchar(255)" />
             <column name="last_name" type="varchar(255)" />
             <column name="middle_name" type="varchar(255)" />
-            <column name="email" type="varchar(255)" />
-            <column name="phone" type="bigint" />
-            <column name="role" type="varchar(100)" />
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="phone" type="bigint">
+                <constraints unique="true"/>
+            </column>
+            <column name="password" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="account_non_expired" type="boolean" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="account_non_locked" type="boolean" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="credentials_non_expired" type="boolean" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="boolean" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created" type="timestamp without time zone" defaultValueDate="LOCALTIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated" type="timestamp without time zone" defaultValueDate="LOCALTIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
 
-    <!-- Заполнение первой строки пробными значениями -->
-    <changeSet author="FeinIV" id="20211212_initial_migration_2">
+    <!-- Create table roles-->
+    <changeSet author="FeinIV" id="20220527_initial_migration_2">
+        <createTable tableName="roles">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false" unique="true" />
+            </column>
+            <column name="name" type="varchar(25)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="created" type="timestamp without time zone" defaultValueDate="LOCALTIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated" type="timestamp without time zone" defaultValueDate="LOCALTIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Create table user_roles-->
+    <changeSet author="FeinIV" id="20220527_initial_migration_3">
+        <createTable tableName="user_roles">
+            <column name="user_id" type="BIGINT"/>
+            <column name="role_id" type="BIGINT"/>
+            <column name="created" type="timestamp without time zone" defaultValueDate="LOCALTIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated" type="timestamp without time zone" defaultValueDate="LOCALTIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="boolean" defaultValueBoolean="false">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="user_roles"
+                                 baseColumnNames="user_id"
+                                 constraintName="fk_user_roles_user"
+                                 referencedTableName="users"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"/>
+
+        <addForeignKeyConstraint baseTableName="user_roles"
+                                 baseColumnNames="role_id"
+                                 constraintName="fk_user_roles_roles"
+                                 referencedTableName="roles"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"/>
+    </changeSet>
+
+
+    <!-- Fill users, roles and user_roles table -->
+    <changeSet author="FeinIV" id="20211212_initial_migration_4">
         <sql>
-            INSERT INTO users (first_name, last_name, middle_name, email, phone, role)
-            VALUES ('adminov', 'admin', 'adminovich', 'admin@gmail.com', 89233215470, 'administrator')
+            INSERT INTO users (username, first_name, last_name, middle_name, email, phone, password)
+            VALUES ('superadmin', 'admin', 'adminov', 'adminovich', 'admin@gmail.com', 89233215470, '$2a$04$8sdg56D7HJbA7uyoPGdzAuZk/F8QFmmj7WmEgBkGlKFK1UvUiJlA.')
         </sql>
+
+        <insert tableName="roles">
+            <column name="name" value="ROLE_USER"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="name" value="ROLE_ADMIN"/>
+        </insert>
+
+        <insert tableName="user_roles">
+            <column name="user_id" value="1"/>
+            <column name="role_id" value="1"/>
+        </insert>
     </changeSet>
 
     <!-- Создание таблицы bicycles-->
-    <changeSet author="FeinIV" id="20211222_initial_migration_3">
+    <changeSet author="FeinIV" id="20211222_initial_migration_5">
         <createTable tableName="bicycles">
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true"/>
@@ -69,7 +166,7 @@
     </changeSet>
 
     <!-- Создание таблицы scooters-->
-    <changeSet author="FeinIV" id="20220112_initial_migration_4">
+    <changeSet author="FeinIV" id="20220112_initial_migration_6">
         <createTable tableName="scooters">
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true"/>
@@ -103,8 +200,8 @@
         </createTable>
     </changeSet>
 
-    <!-- Создание таблицы accessories-->
-    <changeSet author="FeinIV" id="20220113_initial_migration_5">
+    <!-- Create table accessories-->
+    <changeSet author="FeinIV" id="20220113_initial_migration_7">
         <createTable tableName="accessories">
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true"/>
@@ -141,7 +238,7 @@
     </changeSet>
 
     <!-- Создание таблицы equipment-->
-    <changeSet author="FeinIV" id="20220115_initial_migration_6">
+    <changeSet author="FeinIV" id="20220115_initial_migration_8">
         <createTable tableName="equipment">
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true"/>
@@ -180,7 +277,7 @@
     </changeSet>
 
     <!-- Создание таблицы spares-->
-    <changeSet author="FeinIV" id="20220115_initial_migration_7">
+    <changeSet author="FeinIV" id="20220115_initial_migration_9">
         <createTable tableName="spares">
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true"/>
@@ -219,7 +316,7 @@
     </changeSet>
 
     <!-- Создание таблицы product_type_description-->
-    <changeSet author="FeinIV" id="20220116_initial_migration_8">
+    <changeSet author="FeinIV" id="20220116_initial_migration_10">
         <createTable tableName="product_type_description">
             <column name="id" type="serial">
                 <constraints primaryKey="true" nullable="false" unique="true"/>
