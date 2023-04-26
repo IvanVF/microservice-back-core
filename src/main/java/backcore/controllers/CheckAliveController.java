@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CheckAliveController {
 
     @GetMapping("/")
-    public String CheckAlive() {
+    public String checkAlive() {
         return "Microservice back core works!";
     }
 }
