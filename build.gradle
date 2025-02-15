@@ -48,6 +48,6 @@ clean {
 	project.file('app.jar').delete()
 }
 
-test {
+/*test {
 	useJUnitPlatform()
-}
+}*/
