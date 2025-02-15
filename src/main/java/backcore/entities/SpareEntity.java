@@ -3,10 +3,7 @@ package backcore.entities;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
+import jakarta.persistence.*;
 @Entity
 @Table(name = "spares")
 @Data
