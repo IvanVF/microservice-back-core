@@ -1,4 +1,4 @@
-package backcore.repositories;
+package backcore.jpa_repositories;
 
 import backcore.entities.EquipmentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface EquipmentRepository extends JpaRepository<EquipmentEntity, Long> {
+public interface EquipmentJpaRepository extends JpaRepository<EquipmentEntity, Long> {
     List<EquipmentEntity> findAllByType(String type);
     List<EquipmentEntity> findAllByName(String name);
 

@@ -1,7 +1,7 @@
 package backcore.services;
 
 import backcore.entities.ScooterEntity;
-import backcore.repositories.ScooterRepository;
+import backcore.jpa_repositories.ScooterJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.Map;
 public class ScooterService {
 
     @Autowired
-    ScooterRepository scooterRepository;
+    ScooterJpaRepository scooterJpaRepository;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -77,10 +77,10 @@ public class ScooterService {
     }
 
     public List<String> getScootersTypes() {
-        return scooterRepository.getScootersTypes();
+        return scooterJpaRepository.getScootersTypes();
     }
 
     public List<String> getScootersManufacturers(String type) {
-        return scooterRepository.getScootersManufacturers(type);
+        return scooterJpaRepository.getScootersManufacturers(type);
     }
 }

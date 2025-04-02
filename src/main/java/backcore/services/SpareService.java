@@ -1,7 +1,7 @@
 package backcore.services;
 
 import backcore.entities.SpareEntity;
-import backcore.repositories.SpareRepository;
+import backcore.jpa_repositories.SpareJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.Map;
 public class SpareService {
 
     @Autowired
-    SpareRepository spareRepository;
+    SpareJpaRepository spareJpaRepository;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -77,10 +77,10 @@ public class SpareService {
     }
 
     public List<String> getSparesTypes() {
-        return spareRepository.getSparesTypes();
+        return spareJpaRepository.getSparesTypes();
     }
 
     public List<String> getSparesManufacturers(String type) {
-        return spareRepository.getSparesManufacturers(type);
+        return spareJpaRepository.getSparesManufacturers(type);
     }
 }

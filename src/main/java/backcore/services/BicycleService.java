@@ -1,12 +1,13 @@
 package backcore.services;
 
 import backcore.entities.BicycleEntity;
-import backcore.repositories.BicycleRepository;
+import backcore.jpa_repositories.BicycleJpaRepository;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import jakarta.persistence.*;
@@ -16,14 +17,17 @@ import java.util.*;
 public class BicycleService {
 
     @Autowired
-    BicycleRepository bicycleRepository;
+    BicycleJpaRepository bicycleJpaRepository;
+
+    @Autowired
+    StringRedisTemplate redisTemplate;
 
     @PersistenceContext
     private EntityManager entityManager;
 
     public String postBicycles(BicycleEntity img) {
         try {
-            bicycleRepository.save(img);
+            bicycleJpaRepository.save(img);
             return "Success";
         } catch (Exception e) {
             return "Cant put image" + e.getMessage();
@@ -31,17 +35,25 @@ public class BicycleService {
     }
 
     public List<String> getBicycleTypes() {
-        return bicycleRepository.getBicycleTypes();
+        return bicycleJpaRepository.getBicycleTypes();
     }
 
     public List<String> getBicycleManufacturers(String type) {
-        return bicycleRepository.getBicycleManufacturers(type);
+        return bicycleJpaRepository.getBicycleManufacturers(type);
     }
 
     /**
      * Get bicycles by filters
      */
+    //@Cacheable("getBicycles")
     public List<BicycleEntity> getBicycles(Map<String, Object> params, List<Long> ids) {
+
+        //redisTemplate.opsForValue().set("testKey", "testValue");
+
+        // Чтение значения из Redis
+        //String value = redisTemplate.opsForValue().get("testKey");
+
+
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<BicycleEntity> query = criteriaBuilder.createQuery(BicycleEntity.class);
         Root<BicycleEntity> bicycle = query.from(BicycleEntity.class);
@@ -95,6 +107,6 @@ public class BicycleService {
     }
 
     public List<BicycleEntity> getBicyclesBySearchString(String searchString) {
-        return bicycleRepository.getBicyclesBySearchString(searchString);
+        return bicycleJpaRepository.getBicyclesBySearchString(searchString);
     }
 }

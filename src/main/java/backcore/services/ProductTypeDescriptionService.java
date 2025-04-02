@@ -1,7 +1,7 @@
 package backcore.services;
 
 import backcore.entities.ProductTypeDescriptionEntity;
-import backcore.repositories.ProductTypeDescriptionRepository;
+import backcore.jpa_repositories.ProductTypeDescriptionJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class ProductTypeDescriptionService {
 
     @Autowired
-    ProductTypeDescriptionRepository descriptionRepository;
+    ProductTypeDescriptionJpaRepository descriptionRepository;
 
     public ProductTypeDescriptionEntity getDescriptionByName(String name) {
         return descriptionRepository.getByName(name);

@@ -5,7 +5,21 @@ plugins {
 	id 'java'
 }
 
-group = ''
+bootJar {
+	zip64(true)
+	println 'is Zip64 in bootJar task enable? ' + isZip64()
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+	destinationDirectory = file(project.relativeProjectPath('target'))
+	//archiveName('app.jar')
+}
+
+tasks.named("bootJar") {
+	project.file('target/app.jar').delete()
+	mainClass = 'backcore.BackCoreApplication'
+}
+
+
+group = 'backcore'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = JavaVersion.VERSION_21
 targetCompatibility = JavaVersion.VERSION_21
@@ -50,6 +64,21 @@ stage.mustRunAfter(clean)
 
 clean {
 	project.file('app.jar').delete()
+}
+jar {
+	zip64(true)
+	println 'is Zip64 in jar task enable? ' + isZip64()
+	from('src/main/resources')
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	manifest {
+		attributes(
+				'Main-Class': 'backcore.BackCoreApplication'
+		)
+	}
+	from {
+		configurations.runtimeClasspath.collect {it.isDirectory() ? it : zipTree(it)}
+	}
 }
 
 /*test {

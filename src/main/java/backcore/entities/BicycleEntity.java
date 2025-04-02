@@ -5,11 +5,13 @@ import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "bicycles")
 @Data
 @NoArgsConstructor
-public class BicycleEntity extends BaseItemEntity{
+public class BicycleEntity extends BaseItemEntity implements Serializable {
 
     /**
      * Bicycle level from 1 to 8

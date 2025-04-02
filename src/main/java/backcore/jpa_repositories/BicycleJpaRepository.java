@@ -1,7 +1,6 @@
-package backcore.repositories;
+package backcore.jpa_repositories;
 
 import backcore.entities.BicycleEntity;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface BicycleRepository extends JpaRepository<BicycleEntity, Long> {
+public interface BicycleJpaRepository extends JpaRepository<BicycleEntity, Long> {
 
     /**
      * Load available bicycle types

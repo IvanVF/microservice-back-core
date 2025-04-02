@@ -1,4 +1,4 @@
-package backcore.repositories;
+package backcore.jpa_repositories;
 
 import backcore.entities.SpareEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface SpareRepository extends JpaRepository<SpareEntity, Long> {
+public interface SpareJpaRepository extends JpaRepository<SpareEntity, Long> {
     List<SpareEntity> findAllByType(String type);
     List<SpareEntity> findAllByName(String name);
 

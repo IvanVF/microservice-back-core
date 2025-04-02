@@ -1,7 +1,7 @@
 package backcore.services;
 
 import backcore.entities.AccessoryEntity;
-import backcore.repositories.AccessoriesRepository;
+import backcore.jpa_repositories.AccessoriesJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.Map;
 public class AccessoriesService {
 
     @Autowired
-    AccessoriesRepository accessoriesRepository;
+    AccessoriesJpaRepository accessoriesJpaRepository;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -77,11 +77,11 @@ public class AccessoriesService {
     }
 
     public List<String> getAccessoriesTypes() {
-        return accessoriesRepository.getAccessoriesTypes();
+        return accessoriesJpaRepository.getAccessoriesTypes();
     }
 
     public List<String> getAccessoriesManufacturers(String type) {
-        return accessoriesRepository.getAccessoriesManufacturers(type);
+        return accessoriesJpaRepository.getAccessoriesManufacturers(type);
     }
 
 }

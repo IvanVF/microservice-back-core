@@ -1,7 +1,7 @@
 package backcore.services;
 
 import backcore.entities.EquipmentEntity;
-import backcore.repositories.EquipmentRepository;
+import backcore.jpa_repositories.EquipmentJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import java.util.Map;
 public class EquipmentService {
 
     @Autowired
-    EquipmentRepository equipmentRepository;
+    EquipmentJpaRepository equipmentJpaRepository;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -77,10 +77,10 @@ public class EquipmentService {
     }
 
     public List<String> getEquipmentsTypes() {
-        return equipmentRepository.getEquipmentTypes();
+        return equipmentJpaRepository.getEquipmentTypes();
     }
 
     public List<String> getEquipmentsManufacturers(String type) {
-        return equipmentRepository.getEquipmentManufacturers(type);
+        return equipmentJpaRepository.getEquipmentManufacturers(type);
     }
 }
